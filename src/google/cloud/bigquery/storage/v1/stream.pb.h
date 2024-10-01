@@ -99,6 +99,31 @@ namespace bigquery {
 namespace storage {
 namespace v1 {
 
+enum ReadSession_TableReadOptions_ResponseCompressionCodec : int {
+  ReadSession_TableReadOptions_ResponseCompressionCodec_RESPONSE_COMPRESSION_CODEC_UNSPECIFIED = 0,
+  ReadSession_TableReadOptions_ResponseCompressionCodec_RESPONSE_COMPRESSION_CODEC_LZ4 = 2,
+  ReadSession_TableReadOptions_ResponseCompressionCodec_ReadSession_TableReadOptions_ResponseCompressionCodec_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  ReadSession_TableReadOptions_ResponseCompressionCodec_ReadSession_TableReadOptions_ResponseCompressionCodec_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
+};
+bool ReadSession_TableReadOptions_ResponseCompressionCodec_IsValid(int value);
+constexpr ReadSession_TableReadOptions_ResponseCompressionCodec ReadSession_TableReadOptions_ResponseCompressionCodec_ResponseCompressionCodec_MIN = ReadSession_TableReadOptions_ResponseCompressionCodec_RESPONSE_COMPRESSION_CODEC_UNSPECIFIED;
+constexpr ReadSession_TableReadOptions_ResponseCompressionCodec ReadSession_TableReadOptions_ResponseCompressionCodec_ResponseCompressionCodec_MAX = ReadSession_TableReadOptions_ResponseCompressionCodec_RESPONSE_COMPRESSION_CODEC_LZ4;
+constexpr int ReadSession_TableReadOptions_ResponseCompressionCodec_ResponseCompressionCodec_ARRAYSIZE = ReadSession_TableReadOptions_ResponseCompressionCodec_ResponseCompressionCodec_MAX + 1;
+
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ReadSession_TableReadOptions_ResponseCompressionCodec_descriptor();
+template<typename T>
+inline const std::string& ReadSession_TableReadOptions_ResponseCompressionCodec_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, ReadSession_TableReadOptions_ResponseCompressionCodec>::value ||
+    ::std::is_integral<T>::value,
+    "Incorrect type passed to function ReadSession_TableReadOptions_ResponseCompressionCodec_Name.");
+  return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
+    ReadSession_TableReadOptions_ResponseCompressionCodec_descriptor(), enum_t_value);
+}
+inline bool ReadSession_TableReadOptions_ResponseCompressionCodec_Parse(
+    const std::string& name, ReadSession_TableReadOptions_ResponseCompressionCodec* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<ReadSession_TableReadOptions_ResponseCompressionCodec>(
+    ReadSession_TableReadOptions_ResponseCompressionCodec_descriptor(), name, value);
+}
 enum WriteStream_Type : int {
   WriteStream_Type_TYPE_UNSPECIFIED = 0,
   WriteStream_Type_COMMITTED = 1,
@@ -467,12 +492,43 @@ class ReadSession_TableReadOptions PROTOBUF_FINAL :
 
   // nested types ----------------------------------------------------
 
+  typedef ReadSession_TableReadOptions_ResponseCompressionCodec ResponseCompressionCodec;
+  static constexpr ResponseCompressionCodec RESPONSE_COMPRESSION_CODEC_UNSPECIFIED =
+    ReadSession_TableReadOptions_ResponseCompressionCodec_RESPONSE_COMPRESSION_CODEC_UNSPECIFIED;
+  static constexpr ResponseCompressionCodec RESPONSE_COMPRESSION_CODEC_LZ4 =
+    ReadSession_TableReadOptions_ResponseCompressionCodec_RESPONSE_COMPRESSION_CODEC_LZ4;
+  static inline bool ResponseCompressionCodec_IsValid(int value) {
+    return ReadSession_TableReadOptions_ResponseCompressionCodec_IsValid(value);
+  }
+  static constexpr ResponseCompressionCodec ResponseCompressionCodec_MIN =
+    ReadSession_TableReadOptions_ResponseCompressionCodec_ResponseCompressionCodec_MIN;
+  static constexpr ResponseCompressionCodec ResponseCompressionCodec_MAX =
+    ReadSession_TableReadOptions_ResponseCompressionCodec_ResponseCompressionCodec_MAX;
+  static constexpr int ResponseCompressionCodec_ARRAYSIZE =
+    ReadSession_TableReadOptions_ResponseCompressionCodec_ResponseCompressionCodec_ARRAYSIZE;
+  static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
+  ResponseCompressionCodec_descriptor() {
+    return ReadSession_TableReadOptions_ResponseCompressionCodec_descriptor();
+  }
+  template<typename T>
+  static inline const std::string& ResponseCompressionCodec_Name(T enum_t_value) {
+    static_assert(::std::is_same<T, ResponseCompressionCodec>::value ||
+      ::std::is_integral<T>::value,
+      "Incorrect type passed to function ResponseCompressionCodec_Name.");
+    return ReadSession_TableReadOptions_ResponseCompressionCodec_Name(enum_t_value);
+  }
+  static inline bool ResponseCompressionCodec_Parse(const std::string& name,
+      ResponseCompressionCodec* value) {
+    return ReadSession_TableReadOptions_ResponseCompressionCodec_Parse(name, value);
+  }
+
   // accessors -------------------------------------------------------
 
   enum : int {
     kSelectedFieldsFieldNumber = 1,
     kRowRestrictionFieldNumber = 2,
     kSamplePercentageFieldNumber = 5,
+    kResponseCompressionCodecFieldNumber = 6,
     kArrowSerializationOptionsFieldNumber = 3,
     kAvroSerializationOptionsFieldNumber = 4,
   };
@@ -538,6 +594,19 @@ class ReadSession_TableReadOptions PROTOBUF_FINAL :
   void _internal_set_sample_percentage(double value);
   public:
 
+  // .google.cloud.bigquery.storage.v1.ReadSession.TableReadOptions.ResponseCompressionCodec response_compression_codec = 6 [(.google.api.field_behavior) = OPTIONAL];
+  bool has_response_compression_codec() const;
+  private:
+  bool _internal_has_response_compression_codec() const;
+  public:
+  void clear_response_compression_codec();
+  ::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec response_compression_codec() const;
+  void set_response_compression_codec(::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec value);
+  private:
+  ::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec _internal_response_compression_codec() const;
+  void _internal_set_response_compression_codec(::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec value);
+  public:
+
   // .google.cloud.bigquery.storage.v1.ArrowSerializationOptions arrow_serialization_options = 3 [(.google.api.field_behavior) = OPTIONAL];
   bool has_arrow_serialization_options() const;
   private:
@@ -593,6 +662,7 @@ class ReadSession_TableReadOptions PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> selected_fields_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr row_restriction_;
   double sample_percentage_;
+  int response_compression_codec_;
   union OutputFormatSerializationOptionsUnion {
     OutputFormatSerializationOptionsUnion() {}
     ::google::cloud::bigquery::storage::v1::ArrowSerializationOptions* arrow_serialization_options_;
@@ -1874,6 +1944,34 @@ inline void ReadSession_TableReadOptions::_internal_set_sample_percentage(double
 inline void ReadSession_TableReadOptions::set_sample_percentage(double value) {
   _internal_set_sample_percentage(value);
   // @@protoc_insertion_point(field_set:google.cloud.bigquery.storage.v1.ReadSession.TableReadOptions.sample_percentage)
+}
+
+// .google.cloud.bigquery.storage.v1.ReadSession.TableReadOptions.ResponseCompressionCodec response_compression_codec = 6 [(.google.api.field_behavior) = OPTIONAL];
+inline bool ReadSession_TableReadOptions::_internal_has_response_compression_codec() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool ReadSession_TableReadOptions::has_response_compression_codec() const {
+  return _internal_has_response_compression_codec();
+}
+inline void ReadSession_TableReadOptions::clear_response_compression_codec() {
+  response_compression_codec_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec ReadSession_TableReadOptions::_internal_response_compression_codec() const {
+  return static_cast< ::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec >(response_compression_codec_);
+}
+inline ::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec ReadSession_TableReadOptions::response_compression_codec() const {
+  // @@protoc_insertion_point(field_get:google.cloud.bigquery.storage.v1.ReadSession.TableReadOptions.response_compression_codec)
+  return _internal_response_compression_codec();
+}
+inline void ReadSession_TableReadOptions::_internal_set_response_compression_codec(::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec value) {
+  _has_bits_[0] |= 0x00000002u;
+  response_compression_codec_ = value;
+}
+inline void ReadSession_TableReadOptions::set_response_compression_codec(::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec value) {
+  _internal_set_response_compression_codec(value);
+  // @@protoc_insertion_point(field_set:google.cloud.bigquery.storage.v1.ReadSession.TableReadOptions.response_compression_codec)
 }
 
 inline bool ReadSession_TableReadOptions::has_output_format_serialization_options() const {
@@ -3165,6 +3263,11 @@ inline void WriteStream::unsafe_arena_set_allocated_location(
 
 PROTOBUF_NAMESPACE_OPEN
 
+template <> struct is_proto_enum< ::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec>() {
+  return ::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec_descriptor();
+}
 template <> struct is_proto_enum< ::google::cloud::bigquery::storage::v1::WriteStream_Type> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::google::cloud::bigquery::storage::v1::WriteStream_Type>() {

@@ -528,7 +528,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_google_2fcloud_2fbigquery_2fst
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::StreamStats, progress_),
-  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::ReadRowsResponse, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::ReadRowsResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::ReadRowsResponse, _oneof_case_[0]),
@@ -540,8 +540,17 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_google_2fcloud_2fbigquery_2fst
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::ReadRowsResponse, throttle_state_),
   offsetof(::google::cloud::bigquery::storage::v1::ReadRowsResponseDefaultTypeInternal, avro_schema_),
   offsetof(::google::cloud::bigquery::storage::v1::ReadRowsResponseDefaultTypeInternal, arrow_schema_),
+  PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::ReadRowsResponse, uncompressed_byte_size_),
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::ReadRowsResponse, rows_),
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::ReadRowsResponse, schema_),
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  ~0u,
+  0,
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::SplitReadStreamRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -677,24 +686,24 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 16, -1, sizeof(::google::cloud::bigquery::storage::v1::ThrottleState)},
   { 22, -1, sizeof(::google::cloud::bigquery::storage::v1::StreamStats_Progress)},
   { 29, -1, sizeof(::google::cloud::bigquery::storage::v1::StreamStats)},
-  { 35, -1, sizeof(::google::cloud::bigquery::storage::v1::ReadRowsResponse)},
-  { 49, -1, sizeof(::google::cloud::bigquery::storage::v1::SplitReadStreamRequest)},
-  { 56, -1, sizeof(::google::cloud::bigquery::storage::v1::SplitReadStreamResponse)},
-  { 63, -1, sizeof(::google::cloud::bigquery::storage::v1::CreateWriteStreamRequest)},
-  { 70, -1, sizeof(::google::cloud::bigquery::storage::v1::AppendRowsRequest_ProtoData)},
-  { 77, 84, sizeof(::google::cloud::bigquery::storage::v1::AppendRowsRequest_MissingValueInterpretationsEntry_DoNotUse)},
-  { 86, -1, sizeof(::google::cloud::bigquery::storage::v1::AppendRowsRequest)},
-  { 98, -1, sizeof(::google::cloud::bigquery::storage::v1::AppendRowsResponse_AppendResult)},
-  { 104, -1, sizeof(::google::cloud::bigquery::storage::v1::AppendRowsResponse)},
-  { 115, -1, sizeof(::google::cloud::bigquery::storage::v1::GetWriteStreamRequest)},
-  { 122, -1, sizeof(::google::cloud::bigquery::storage::v1::BatchCommitWriteStreamsRequest)},
-  { 129, -1, sizeof(::google::cloud::bigquery::storage::v1::BatchCommitWriteStreamsResponse)},
-  { 136, -1, sizeof(::google::cloud::bigquery::storage::v1::FinalizeWriteStreamRequest)},
-  { 142, -1, sizeof(::google::cloud::bigquery::storage::v1::FinalizeWriteStreamResponse)},
-  { 148, -1, sizeof(::google::cloud::bigquery::storage::v1::FlushRowsRequest)},
-  { 155, -1, sizeof(::google::cloud::bigquery::storage::v1::FlushRowsResponse)},
-  { 161, -1, sizeof(::google::cloud::bigquery::storage::v1::StorageError)},
-  { 169, -1, sizeof(::google::cloud::bigquery::storage::v1::RowError)},
+  { 35, 50, sizeof(::google::cloud::bigquery::storage::v1::ReadRowsResponse)},
+  { 58, -1, sizeof(::google::cloud::bigquery::storage::v1::SplitReadStreamRequest)},
+  { 65, -1, sizeof(::google::cloud::bigquery::storage::v1::SplitReadStreamResponse)},
+  { 72, -1, sizeof(::google::cloud::bigquery::storage::v1::CreateWriteStreamRequest)},
+  { 79, -1, sizeof(::google::cloud::bigquery::storage::v1::AppendRowsRequest_ProtoData)},
+  { 86, 93, sizeof(::google::cloud::bigquery::storage::v1::AppendRowsRequest_MissingValueInterpretationsEntry_DoNotUse)},
+  { 95, -1, sizeof(::google::cloud::bigquery::storage::v1::AppendRowsRequest)},
+  { 107, -1, sizeof(::google::cloud::bigquery::storage::v1::AppendRowsResponse_AppendResult)},
+  { 113, -1, sizeof(::google::cloud::bigquery::storage::v1::AppendRowsResponse)},
+  { 124, -1, sizeof(::google::cloud::bigquery::storage::v1::GetWriteStreamRequest)},
+  { 131, -1, sizeof(::google::cloud::bigquery::storage::v1::BatchCommitWriteStreamsRequest)},
+  { 138, -1, sizeof(::google::cloud::bigquery::storage::v1::BatchCommitWriteStreamsResponse)},
+  { 145, -1, sizeof(::google::cloud::bigquery::storage::v1::FinalizeWriteStreamRequest)},
+  { 151, -1, sizeof(::google::cloud::bigquery::storage::v1::FinalizeWriteStreamResponse)},
+  { 157, -1, sizeof(::google::cloud::bigquery::storage::v1::FlushRowsRequest)},
+  { 164, -1, sizeof(::google::cloud::bigquery::storage::v1::FlushRowsResponse)},
+  { 170, -1, sizeof(::google::cloud::bigquery::storage::v1::StorageError)},
+  { 178, -1, sizeof(::google::cloud::bigquery::storage::v1::RowError)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -750,7 +759,7 @@ const char descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2f
   "\022H\n\010progress\030\002 \001(\01326.google.cloud.bigque"
   "ry.storage.v1.StreamStats.Progress\032>\n\010Pr"
   "ogress\022\031\n\021at_response_start\030\001 \001(\001\022\027\n\017at_"
-  "response_end\030\002 \001(\001\"\347\003\n\020ReadRowsResponse\022"
+  "response_end\030\002 \001(\001\"\254\004\n\020ReadRowsResponse\022"
   "\?\n\tavro_rows\030\003 \001(\0132*.google.cloud.bigque"
   "ry.storage.v1.AvroRowsH\000\022P\n\022arrow_record"
   "_batch\030\004 \001(\01322.google.cloud.bigquery.sto"
@@ -762,151 +771,153 @@ const char descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2f
   "\0132,.google.cloud.bigquery.storage.v1.Avr"
   "oSchemaB\003\340A\003H\001\022J\n\014arrow_schema\030\010 \001(\0132-.g"
   "oogle.cloud.bigquery.storage.v1.ArrowSch"
-  "emaB\003\340A\003H\001B\006\n\004rowsB\010\n\006schema\"k\n\026SplitRea"
-  "dStreamRequest\022\?\n\004name\030\001 \001(\tB1\340A\002\372A+\n)bi"
-  "gquerystorage.googleapis.com/ReadStream\022"
-  "\020\n\010fraction\030\002 \001(\001\"\247\001\n\027SplitReadStreamRes"
-  "ponse\022D\n\016primary_stream\030\001 \001(\0132,.google.c"
-  "loud.bigquery.storage.v1.ReadStream\022F\n\020r"
-  "emainder_stream\030\002 \001(\0132,.google.cloud.big"
-  "query.storage.v1.ReadStream\"\233\001\n\030CreateWr"
-  "iteStreamRequest\0225\n\006parent\030\001 \001(\tB%\340A\002\372A\037"
-  "\n\035bigquery.googleapis.com/Table\022H\n\014write"
-  "_stream\030\002 \001(\0132-.google.cloud.bigquery.st"
-  "orage.v1.WriteStreamB\003\340A\002\"\215\007\n\021AppendRows"
-  "Request\022H\n\014write_stream\030\001 \001(\tB2\340A\002\372A,\n*b"
-  "igquerystorage.googleapis.com/WriteStrea"
-  "m\022+\n\006offset\030\002 \001(\0132\033.google.protobuf.Int6"
-  "4Value\022S\n\nproto_rows\030\004 \001(\0132=.google.clou"
-  "d.bigquery.storage.v1.AppendRowsRequest."
-  "ProtoDataH\000\022\020\n\010trace_id\030\006 \001(\t\022{\n\035missing"
-  "_value_interpretations\030\007 \003(\0132T.google.cl"
-  "oud.bigquery.storage.v1.AppendRowsReques"
-  "t.MissingValueInterpretationsEntry\022\201\001\n$d"
-  "efault_missing_value_interpretation\030\010 \001("
-  "\0162N.google.cloud.bigquery.storage.v1.App"
-  "endRowsRequest.MissingValueInterpretatio"
-  "nB\003\340A\001\032\214\001\n\tProtoData\022D\n\rwriter_schema\030\001 "
-  "\001(\0132-.google.cloud.bigquery.storage.v1.P"
-  "rotoSchema\0229\n\004rows\030\002 \001(\0132+.google.cloud."
-  "bigquery.storage.v1.ProtoRows\032\222\001\n Missin"
-  "gValueInterpretationsEntry\022\013\n\003key\030\001 \001(\t\022"
-  "]\n\005value\030\002 \001(\0162N.google.cloud.bigquery.s"
-  "torage.v1.AppendRowsRequest.MissingValue"
-  "Interpretation:\0028\001\"m\n\032MissingValueInterp"
-  "retation\022,\n(MISSING_VALUE_INTERPRETATION"
-  "_UNSPECIFIED\020\000\022\016\n\nNULL_VALUE\020\001\022\021\n\rDEFAUL"
-  "T_VALUE\020\002B\006\n\004rows\"\373\002\n\022AppendRowsResponse"
-  "\022Z\n\rappend_result\030\001 \001(\0132A.google.cloud.b"
-  "igquery.storage.v1.AppendRowsResponse.Ap"
-  "pendResultH\000\022#\n\005error\030\002 \001(\0132\022.google.rpc"
-  ".StatusH\000\022E\n\016updated_schema\030\003 \001(\0132-.goog"
-  "le.cloud.bigquery.storage.v1.TableSchema"
-  "\022>\n\nrow_errors\030\004 \003(\0132*.google.cloud.bigq"
-  "uery.storage.v1.RowError\022\024\n\014write_stream"
-  "\030\005 \001(\t\032;\n\014AppendResult\022+\n\006offset\030\001 \001(\0132\033"
-  ".google.protobuf.Int64ValueB\n\n\010response\""
-  "\232\001\n\025GetWriteStreamRequest\022@\n\004name\030\001 \001(\tB"
-  "2\340A\002\372A,\n*bigquerystorage.googleapis.com/"
-  "WriteStream\022\?\n\004view\030\003 \001(\01621.google.cloud"
-  ".bigquery.storage.v1.WriteStreamView\"s\n\036"
-  "BatchCommitWriteStreamsRequest\0225\n\006parent"
-  "\030\001 \001(\tB%\340A\002\372A\037\n\035bigquery.googleapis.com/"
-  "Table\022\032\n\rwrite_streams\030\002 \003(\tB\003\340A\002\"\231\001\n\037Ba"
-  "tchCommitWriteStreamsResponse\022/\n\013commit_"
-  "time\030\001 \001(\0132\032.google.protobuf.Timestamp\022E"
-  "\n\rstream_errors\030\002 \003(\0132..google.cloud.big"
-  "query.storage.v1.StorageError\"^\n\032Finaliz"
-  "eWriteStreamRequest\022@\n\004name\030\001 \001(\tB2\340A\002\372A"
-  ",\n*bigquerystorage.googleapis.com/WriteS"
-  "tream\"0\n\033FinalizeWriteStreamResponse\022\021\n\t"
-  "row_count\030\001 \001(\003\"\211\001\n\020FlushRowsRequest\022H\n\014"
+  "emaB\003\340A\003H\001\022(\n\026uncompressed_byte_size\030\t \001"
+  "(\003B\003\340A\001H\002\210\001\001B\006\n\004rowsB\010\n\006schemaB\031\n\027_uncom"
+  "pressed_byte_size\"k\n\026SplitReadStreamRequ"
+  "est\022\?\n\004name\030\001 \001(\tB1\340A\002\372A+\n)bigquerystora"
+  "ge.googleapis.com/ReadStream\022\020\n\010fraction"
+  "\030\002 \001(\001\"\247\001\n\027SplitReadStreamResponse\022D\n\016pr"
+  "imary_stream\030\001 \001(\0132,.google.cloud.bigque"
+  "ry.storage.v1.ReadStream\022F\n\020remainder_st"
+  "ream\030\002 \001(\0132,.google.cloud.bigquery.stora"
+  "ge.v1.ReadStream\"\233\001\n\030CreateWriteStreamRe"
+  "quest\0225\n\006parent\030\001 \001(\tB%\340A\002\372A\037\n\035bigquery."
+  "googleapis.com/Table\022H\n\014write_stream\030\002 \001"
+  "(\0132-.google.cloud.bigquery.storage.v1.Wr"
+  "iteStreamB\003\340A\002\"\215\007\n\021AppendRowsRequest\022H\n\014"
   "write_stream\030\001 \001(\tB2\340A\002\372A,\n*bigquerystor"
   "age.googleapis.com/WriteStream\022+\n\006offset"
-  "\030\002 \001(\0132\033.google.protobuf.Int64Value\"#\n\021F"
-  "lushRowsResponse\022\016\n\006offset\030\001 \001(\003\"\244\004\n\014Sto"
-  "rageError\022M\n\004code\030\001 \001(\0162\?.google.cloud.b"
-  "igquery.storage.v1.StorageError.StorageE"
-  "rrorCode\022\016\n\006entity\030\002 \001(\t\022\025\n\rerror_messag"
-  "e\030\003 \001(\t\"\235\003\n\020StorageErrorCode\022\"\n\036STORAGE_"
-  "ERROR_CODE_UNSPECIFIED\020\000\022\023\n\017TABLE_NOT_FO"
-  "UND\020\001\022\034\n\030STREAM_ALREADY_COMMITTED\020\002\022\024\n\020S"
-  "TREAM_NOT_FOUND\020\003\022\027\n\023INVALID_STREAM_TYPE"
-  "\020\004\022\030\n\024INVALID_STREAM_STATE\020\005\022\024\n\020STREAM_F"
-  "INALIZED\020\006\022 \n\034SCHEMA_MISMATCH_EXTRA_FIEL"
-  "DS\020\007\022\031\n\025OFFSET_ALREADY_EXISTS\020\010\022\027\n\023OFFSE"
-  "T_OUT_OF_RANGE\020\t\022\025\n\021CMEK_NOT_PROVIDED\020\n\022"
-  "\031\n\025INVALID_CMEK_PROVIDED\020\013\022\031\n\025CMEK_ENCRY"
-  "PTION_ERROR\020\014\022\025\n\021KMS_SERVICE_ERROR\020\r\022\031\n\025"
-  "KMS_PERMISSION_DENIED\020\016\"\263\001\n\010RowError\022\r\n\005"
-  "index\030\001 \001(\003\022E\n\004code\030\002 \001(\01627.google.cloud"
-  ".bigquery.storage.v1.RowError.RowErrorCo"
-  "de\022\017\n\007message\030\003 \001(\t\"@\n\014RowErrorCode\022\036\n\032R"
-  "OW_ERROR_CODE_UNSPECIFIED\020\000\022\020\n\014FIELDS_ER"
-  "ROR\020\0012\222\006\n\014BigQueryRead\022\351\001\n\021CreateReadSes"
-  "sion\022:.google.cloud.bigquery.storage.v1."
-  "CreateReadSessionRequest\032-.google.cloud."
-  "bigquery.storage.v1.ReadSession\"i\202\323\344\223\002<\""
-  "7/v1/{read_session.table=projects/*/data"
-  "sets/*/tables/*}:\001*\332A$parent,read_sessio"
-  "n,max_stream_count\022\317\001\n\010ReadRows\0221.google"
-  ".cloud.bigquery.storage.v1.ReadRowsReque"
-  "st\0322.google.cloud.bigquery.storage.v1.Re"
-  "adRowsResponse\"Z\202\323\344\223\002\?\022=/v1/{read_stream"
-  "=projects/*/locations/*/sessions/*/strea"
-  "ms/*}\332A\022read_stream,offset0\001\022\306\001\n\017SplitRe"
-  "adStream\0228.google.cloud.bigquery.storage"
-  ".v1.SplitReadStreamRequest\0329.google.clou"
-  "d.bigquery.storage.v1.SplitReadStreamRes"
-  "ponse\">\202\323\344\223\0028\0226/v1/{name=projects/*/loca"
-  "tions/*/sessions/*/streams/*}\032{\312A\036bigque"
-  "rystorage.googleapis.com\322AWhttps://www.g"
-  "oogleapis.com/auth/bigquery,https://www."
-  "googleapis.com/auth/cloud-platform2\274\013\n\rB"
-  "igQueryWrite\022\327\001\n\021CreateWriteStream\022:.goo"
-  "gle.cloud.bigquery.storage.v1.CreateWrit"
-  "eStreamRequest\032-.google.cloud.bigquery.s"
-  "torage.v1.WriteStream\"W\202\323\344\223\002;\"+/v1/{pare"
-  "nt=projects/*/datasets/*/tables/*}:\014writ"
-  "e_stream\332A\023parent,write_stream\022\322\001\n\nAppen"
-  "dRows\0223.google.cloud.bigquery.storage.v1"
-  ".AppendRowsRequest\0324.google.cloud.bigque"
-  "ry.storage.v1.AppendRowsResponse\"U\202\323\344\223\002@"
-  "\";/v1/{write_stream=projects/*/datasets/"
-  "*/tables/*/streams/*}:\001*\332A\014write_stream("
-  "\0010\001\022\277\001\n\016GetWriteStream\0227.google.cloud.bi"
-  "gquery.storage.v1.GetWriteStreamRequest\032"
-  "-.google.cloud.bigquery.storage.v1.Write"
-  "Stream\"E\202\323\344\223\0028\"3/v1/{name=projects/*/dat"
-  "asets/*/tables/*/streams/*}:\001*\332A\004name\022\331\001"
-  "\n\023FinalizeWriteStream\022<.google.cloud.big"
-  "query.storage.v1.FinalizeWriteStreamRequ"
-  "est\032=.google.cloud.bigquery.storage.v1.F"
-  "inalizeWriteStreamResponse\"E\202\323\344\223\0028\"3/v1/"
-  "{name=projects/*/datasets/*/tables/*/str"
-  "eams/*}:\001*\332A\004name\022\334\001\n\027BatchCommitWriteSt"
-  "reams\022@.google.cloud.bigquery.storage.v1"
-  ".BatchCommitWriteStreamsRequest\032A.google"
-  ".cloud.bigquery.storage.v1.BatchCommitWr"
-  "iteStreamsResponse\"<\202\323\344\223\002-\022+/v1/{parent="
-  "projects/*/datasets/*/tables/*}\332A\006parent"
-  "\022\313\001\n\tFlushRows\0222.google.cloud.bigquery.s"
-  "torage.v1.FlushRowsRequest\0323.google.clou"
-  "d.bigquery.storage.v1.FlushRowsResponse\""
-  "U\202\323\344\223\002@\";/v1/{write_stream=projects/*/da"
-  "tasets/*/tables/*/streams/*}:\001*\332A\014write_"
-  "stream\032\260\001\312A\036bigquerystorage.googleapis.c"
-  "om\322A\213\001https://www.googleapis.com/auth/bi"
-  "gquery,https://www.googleapis.com/auth/b"
-  "igquery.insertdata,https://www.googleapi"
-  "s.com/auth/cloud-platformB\224\002\n$com.google"
-  ".cloud.bigquery.storage.v1B\014StorageProto"
-  "P\001Z>cloud.google.com/go/bigquery/storage"
-  "/apiv1/storagepb;storagepb\252\002 Google.Clou"
-  "d.BigQuery.Storage.V1\312\002 Google\\Cloud\\Big"
-  "Query\\Storage\\V1\352AU\n\035bigquery.googleapis"
-  ".com/Table\0224projects/{project}/datasets/"
-  "{dataset}/tables/{table}b\006proto3"
+  "\030\002 \001(\0132\033.google.protobuf.Int64Value\022S\n\np"
+  "roto_rows\030\004 \001(\0132=.google.cloud.bigquery."
+  "storage.v1.AppendRowsRequest.ProtoDataH\000"
+  "\022\020\n\010trace_id\030\006 \001(\t\022{\n\035missing_value_inte"
+  "rpretations\030\007 \003(\0132T.google.cloud.bigquer"
+  "y.storage.v1.AppendRowsRequest.MissingVa"
+  "lueInterpretationsEntry\022\201\001\n$default_miss"
+  "ing_value_interpretation\030\010 \001(\0162N.google."
+  "cloud.bigquery.storage.v1.AppendRowsRequ"
+  "est.MissingValueInterpretationB\003\340A\001\032\214\001\n\t"
+  "ProtoData\022D\n\rwriter_schema\030\001 \001(\0132-.googl"
+  "e.cloud.bigquery.storage.v1.ProtoSchema\022"
+  "9\n\004rows\030\002 \001(\0132+.google.cloud.bigquery.st"
+  "orage.v1.ProtoRows\032\222\001\n MissingValueInter"
+  "pretationsEntry\022\013\n\003key\030\001 \001(\t\022]\n\005value\030\002 "
+  "\001(\0162N.google.cloud.bigquery.storage.v1.A"
+  "ppendRowsRequest.MissingValueInterpretat"
+  "ion:\0028\001\"m\n\032MissingValueInterpretation\022,\n"
+  "(MISSING_VALUE_INTERPRETATION_UNSPECIFIE"
+  "D\020\000\022\016\n\nNULL_VALUE\020\001\022\021\n\rDEFAULT_VALUE\020\002B\006"
+  "\n\004rows\"\373\002\n\022AppendRowsResponse\022Z\n\rappend_"
+  "result\030\001 \001(\0132A.google.cloud.bigquery.sto"
+  "rage.v1.AppendRowsResponse.AppendResultH"
+  "\000\022#\n\005error\030\002 \001(\0132\022.google.rpc.StatusH\000\022E"
+  "\n\016updated_schema\030\003 \001(\0132-.google.cloud.bi"
+  "gquery.storage.v1.TableSchema\022>\n\nrow_err"
+  "ors\030\004 \003(\0132*.google.cloud.bigquery.storag"
+  "e.v1.RowError\022\024\n\014write_stream\030\005 \001(\t\032;\n\014A"
+  "ppendResult\022+\n\006offset\030\001 \001(\0132\033.google.pro"
+  "tobuf.Int64ValueB\n\n\010response\"\232\001\n\025GetWrit"
+  "eStreamRequest\022@\n\004name\030\001 \001(\tB2\340A\002\372A,\n*bi"
+  "gquerystorage.googleapis.com/WriteStream"
+  "\022\?\n\004view\030\003 \001(\01621.google.cloud.bigquery.s"
+  "torage.v1.WriteStreamView\"s\n\036BatchCommit"
+  "WriteStreamsRequest\0225\n\006parent\030\001 \001(\tB%\340A\002"
+  "\372A\037\n\035bigquery.googleapis.com/Table\022\032\n\rwr"
+  "ite_streams\030\002 \003(\tB\003\340A\002\"\231\001\n\037BatchCommitWr"
+  "iteStreamsResponse\022/\n\013commit_time\030\001 \001(\0132"
+  "\032.google.protobuf.Timestamp\022E\n\rstream_er"
+  "rors\030\002 \003(\0132..google.cloud.bigquery.stora"
+  "ge.v1.StorageError\"^\n\032FinalizeWriteStrea"
+  "mRequest\022@\n\004name\030\001 \001(\tB2\340A\002\372A,\n*bigquery"
+  "storage.googleapis.com/WriteStream\"0\n\033Fi"
+  "nalizeWriteStreamResponse\022\021\n\trow_count\030\001"
+  " \001(\003\"\211\001\n\020FlushRowsRequest\022H\n\014write_strea"
+  "m\030\001 \001(\tB2\340A\002\372A,\n*bigquerystorage.googlea"
+  "pis.com/WriteStream\022+\n\006offset\030\002 \001(\0132\033.go"
+  "ogle.protobuf.Int64Value\"#\n\021FlushRowsRes"
+  "ponse\022\016\n\006offset\030\001 \001(\003\"\244\004\n\014StorageError\022M"
+  "\n\004code\030\001 \001(\0162\?.google.cloud.bigquery.sto"
+  "rage.v1.StorageError.StorageErrorCode\022\016\n"
+  "\006entity\030\002 \001(\t\022\025\n\rerror_message\030\003 \001(\t\"\235\003\n"
+  "\020StorageErrorCode\022\"\n\036STORAGE_ERROR_CODE_"
+  "UNSPECIFIED\020\000\022\023\n\017TABLE_NOT_FOUND\020\001\022\034\n\030ST"
+  "REAM_ALREADY_COMMITTED\020\002\022\024\n\020STREAM_NOT_F"
+  "OUND\020\003\022\027\n\023INVALID_STREAM_TYPE\020\004\022\030\n\024INVAL"
+  "ID_STREAM_STATE\020\005\022\024\n\020STREAM_FINALIZED\020\006\022"
+  " \n\034SCHEMA_MISMATCH_EXTRA_FIELDS\020\007\022\031\n\025OFF"
+  "SET_ALREADY_EXISTS\020\010\022\027\n\023OFFSET_OUT_OF_RA"
+  "NGE\020\t\022\025\n\021CMEK_NOT_PROVIDED\020\n\022\031\n\025INVALID_"
+  "CMEK_PROVIDED\020\013\022\031\n\025CMEK_ENCRYPTION_ERROR"
+  "\020\014\022\025\n\021KMS_SERVICE_ERROR\020\r\022\031\n\025KMS_PERMISS"
+  "ION_DENIED\020\016\"\263\001\n\010RowError\022\r\n\005index\030\001 \001(\003"
+  "\022E\n\004code\030\002 \001(\01627.google.cloud.bigquery.s"
+  "torage.v1.RowError.RowErrorCode\022\017\n\007messa"
+  "ge\030\003 \001(\t\"@\n\014RowErrorCode\022\036\n\032ROW_ERROR_CO"
+  "DE_UNSPECIFIED\020\000\022\020\n\014FIELDS_ERROR\020\0012\222\006\n\014B"
+  "igQueryRead\022\351\001\n\021CreateReadSession\022:.goog"
+  "le.cloud.bigquery.storage.v1.CreateReadS"
+  "essionRequest\032-.google.cloud.bigquery.st"
+  "orage.v1.ReadSession\"i\202\323\344\223\002<\"7/v1/{read_"
+  "session.table=projects/*/datasets/*/tabl"
+  "es/*}:\001*\332A$parent,read_session,max_strea"
+  "m_count\022\317\001\n\010ReadRows\0221.google.cloud.bigq"
+  "uery.storage.v1.ReadRowsRequest\0322.google"
+  ".cloud.bigquery.storage.v1.ReadRowsRespo"
+  "nse\"Z\202\323\344\223\002\?\022=/v1/{read_stream=projects/*"
+  "/locations/*/sessions/*/streams/*}\332A\022rea"
+  "d_stream,offset0\001\022\306\001\n\017SplitReadStream\0228."
+  "google.cloud.bigquery.storage.v1.SplitRe"
+  "adStreamRequest\0329.google.cloud.bigquery."
+  "storage.v1.SplitReadStreamResponse\">\202\323\344\223"
+  "\0028\0226/v1/{name=projects/*/locations/*/ses"
+  "sions/*/streams/*}\032{\312A\036bigquerystorage.g"
+  "oogleapis.com\322AWhttps://www.googleapis.c"
+  "om/auth/bigquery,https://www.googleapis."
+  "com/auth/cloud-platform2\274\013\n\rBigQueryWrit"
+  "e\022\327\001\n\021CreateWriteStream\022:.google.cloud.b"
+  "igquery.storage.v1.CreateWriteStreamRequ"
+  "est\032-.google.cloud.bigquery.storage.v1.W"
+  "riteStream\"W\202\323\344\223\002;\"+/v1/{parent=projects"
+  "/*/datasets/*/tables/*}:\014write_stream\332A\023"
+  "parent,write_stream\022\322\001\n\nAppendRows\0223.goo"
+  "gle.cloud.bigquery.storage.v1.AppendRows"
+  "Request\0324.google.cloud.bigquery.storage."
+  "v1.AppendRowsResponse\"U\202\323\344\223\002@\";/v1/{writ"
+  "e_stream=projects/*/datasets/*/tables/*/"
+  "streams/*}:\001*\332A\014write_stream(\0010\001\022\277\001\n\016Get"
+  "WriteStream\0227.google.cloud.bigquery.stor"
+  "age.v1.GetWriteStreamRequest\032-.google.cl"
+  "oud.bigquery.storage.v1.WriteStream\"E\202\323\344"
+  "\223\0028\"3/v1/{name=projects/*/datasets/*/tab"
+  "les/*/streams/*}:\001*\332A\004name\022\331\001\n\023FinalizeW"
+  "riteStream\022<.google.cloud.bigquery.stora"
+  "ge.v1.FinalizeWriteStreamRequest\032=.googl"
+  "e.cloud.bigquery.storage.v1.FinalizeWrit"
+  "eStreamResponse\"E\202\323\344\223\0028\"3/v1/{name=proje"
+  "cts/*/datasets/*/tables/*/streams/*}:\001*\332"
+  "A\004name\022\334\001\n\027BatchCommitWriteStreams\022@.goo"
+  "gle.cloud.bigquery.storage.v1.BatchCommi"
+  "tWriteStreamsRequest\032A.google.cloud.bigq"
+  "uery.storage.v1.BatchCommitWriteStreamsR"
+  "esponse\"<\202\323\344\223\002-\022+/v1/{parent=projects/*/"
+  "datasets/*/tables/*}\332A\006parent\022\313\001\n\tFlushR"
+  "ows\0222.google.cloud.bigquery.storage.v1.F"
+  "lushRowsRequest\0323.google.cloud.bigquery."
+  "storage.v1.FlushRowsResponse\"U\202\323\344\223\002@\";/v"
+  "1/{write_stream=projects/*/datasets/*/ta"
+  "bles/*/streams/*}:\001*\332A\014write_stream\032\260\001\312A"
+  "\036bigquerystorage.googleapis.com\322A\213\001https"
+  "://www.googleapis.com/auth/bigquery,http"
+  "s://www.googleapis.com/auth/bigquery.ins"
+  "ertdata,https://www.googleapis.com/auth/"
+  "cloud-platformB\224\002\n$com.google.cloud.bigq"
+  "uery.storage.v1B\014StorageProtoP\001Z>cloud.g"
+  "oogle.com/go/bigquery/storage/apiv1/stor"
+  "agepb;storagepb\252\002 Google.Cloud.BigQuery."
+  "Storage.V1\312\002 Google\\Cloud\\BigQuery\\Stora"
+  "ge\\V1\352AU\n\035bigquery.googleapis.com/Table\022"
+  "4projects/{project}/datasets/{dataset}/t"
+  "ables/{table}b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto_deps[12] = {
   &::descriptor_table_google_2fapi_2fannotations_2eproto,
@@ -949,7 +960,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_goo
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto = {
-  false, false, descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto, "google/cloud/bigquery/storage/v1/storage.proto", 7312,
+  false, false, descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto, "google/cloud/bigquery/storage/v1/storage.proto", 7381,
   &descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto_once, descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto_sccs, descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto_deps, 23, 12,
   schemas, file_default_instances, TableStruct_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto::offsets,
   file_level_metadata_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto, 23, file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto, file_level_service_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto,
@@ -2265,12 +2276,16 @@ void ReadRowsResponse::InitAsDefaultInstance() {
 }
 class ReadRowsResponse::_Internal {
  public:
+  using HasBits = decltype(std::declval<ReadRowsResponse>()._has_bits_);
   static const ::google::cloud::bigquery::storage::v1::AvroRows& avro_rows(const ReadRowsResponse* msg);
   static const ::google::cloud::bigquery::storage::v1::ArrowRecordBatch& arrow_record_batch(const ReadRowsResponse* msg);
   static const ::google::cloud::bigquery::storage::v1::StreamStats& stats(const ReadRowsResponse* msg);
   static const ::google::cloud::bigquery::storage::v1::ThrottleState& throttle_state(const ReadRowsResponse* msg);
   static const ::google::cloud::bigquery::storage::v1::AvroSchema& avro_schema(const ReadRowsResponse* msg);
   static const ::google::cloud::bigquery::storage::v1::ArrowSchema& arrow_schema(const ReadRowsResponse* msg);
+  static void set_has_uncompressed_byte_size(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
 };
 
 const ::google::cloud::bigquery::storage::v1::AvroRows&
@@ -2396,7 +2411,8 @@ ReadRowsResponse::ReadRowsResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   // @@protoc_insertion_point(arena_constructor:google.cloud.bigquery.storage.v1.ReadRowsResponse)
 }
 ReadRowsResponse::ReadRowsResponse(const ReadRowsResponse& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_stats()) {
     stats_ = new ::google::cloud::bigquery::storage::v1::StreamStats(*from.stats_);
@@ -2408,7 +2424,9 @@ ReadRowsResponse::ReadRowsResponse(const ReadRowsResponse& from)
   } else {
     throttle_state_ = nullptr;
   }
-  row_count_ = from.row_count_;
+  ::memcpy(&row_count_, &from.row_count_,
+    static_cast<size_t>(reinterpret_cast<char*>(&uncompressed_byte_size_) -
+    reinterpret_cast<char*>(&row_count_)) + sizeof(uncompressed_byte_size_));
   clear_has_rows();
   switch (from.rows_case()) {
     case kAvroRows: {
@@ -2443,8 +2461,8 @@ ReadRowsResponse::ReadRowsResponse(const ReadRowsResponse& from)
 void ReadRowsResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReadRowsResponse_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto.base);
   ::memset(&stats_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&row_count_) -
-      reinterpret_cast<char*>(&stats_)) + sizeof(row_count_));
+      reinterpret_cast<char*>(&uncompressed_byte_size_) -
+      reinterpret_cast<char*>(&stats_)) + sizeof(uncompressed_byte_size_));
   clear_has_rows();
   clear_has_schema();
 }
@@ -2542,13 +2560,16 @@ void ReadRowsResponse::Clear() {
   }
   throttle_state_ = nullptr;
   row_count_ = PROTOBUF_LONGLONG(0);
+  uncompressed_byte_size_ = PROTOBUF_LONGLONG(0);
   clear_rows();
   clear_schema();
+  _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ReadRowsResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
@@ -2604,6 +2625,14 @@ const char* ReadRowsResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
+      // int64 uncompressed_byte_size = 9 [(.google.api.field_behavior) = OPTIONAL];
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 72)) {
+          _Internal::set_has_uncompressed_byte_size(&has_bits);
+          uncompressed_byte_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
@@ -2619,6 +2648,7 @@ const char* ReadRowsResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
     }  // switch
   }  // while
 success:
+  _has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -2686,6 +2716,12 @@ failure:
         8, _Internal::arrow_schema(this), target, stream);
   }
 
+  // int64 uncompressed_byte_size = 9 [(.google.api.field_behavior) = OPTIONAL];
+  if (_internal_has_uncompressed_byte_size()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(9, this->_internal_uncompressed_byte_size(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -2721,6 +2757,14 @@ size_t ReadRowsResponse::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_row_count());
+  }
+
+  // int64 uncompressed_byte_size = 9 [(.google.api.field_behavior) = OPTIONAL];
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
+        this->_internal_uncompressed_byte_size());
   }
 
   switch (rows_case()) {
@@ -2801,6 +2845,9 @@ void ReadRowsResponse::MergeFrom(const ReadRowsResponse& from) {
   if (from.row_count() != 0) {
     _internal_set_row_count(from._internal_row_count());
   }
+  if (from._internal_has_uncompressed_byte_size()) {
+    _internal_set_uncompressed_byte_size(from._internal_uncompressed_byte_size());
+  }
   switch (from.rows_case()) {
     case kAvroRows: {
       _internal_mutable_avro_rows()->::google::cloud::bigquery::storage::v1::AvroRows::MergeFrom(from._internal_avro_rows());
@@ -2850,9 +2897,10 @@ bool ReadRowsResponse::IsInitialized() const {
 void ReadRowsResponse::InternalSwap(ReadRowsResponse* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(ReadRowsResponse, row_count_)
-      + sizeof(ReadRowsResponse::row_count_)
+      PROTOBUF_FIELD_OFFSET(ReadRowsResponse, uncompressed_byte_size_)
+      + sizeof(ReadRowsResponse::uncompressed_byte_size_)
       - PROTOBUF_FIELD_OFFSET(ReadRowsResponse, stats_)>(
           reinterpret_cast<char*>(&stats_),
           reinterpret_cast<char*>(&other->stats_));

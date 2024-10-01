@@ -14,7 +14,8 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TableFieldSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TableFieldSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TableFieldSchema_FieldElementType_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto;
 namespace google {
 namespace cloud {
 namespace bigquery {
@@ -24,6 +25,10 @@ class TableSchemaDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TableSchema> _instance;
 } _TableSchema_default_instance_;
+class TableFieldSchema_FieldElementTypeDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TableFieldSchema_FieldElementType> _instance;
+} _TableFieldSchema_FieldElementType_default_instance_;
 class TableFieldSchemaDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TableFieldSchema> _instance;
@@ -44,8 +49,23 @@ static void InitDefaultsscc_info_TableFieldSchema_google_2fcloud_2fbigquery_2fst
   ::google::cloud::bigquery::storage::v1::TableFieldSchema::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TableFieldSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_TableFieldSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TableFieldSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_TableFieldSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto}, {
+      &scc_info_TableFieldSchema_FieldElementType_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto.base,}};
+
+static void InitDefaultsscc_info_TableFieldSchema_FieldElementType_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::google::cloud::bigquery::storage::v1::_TableFieldSchema_FieldElementType_default_instance_;
+    new (ptr) ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_TableFieldSchema_FieldElementType_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_TableFieldSchema_FieldElementType_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto}, {}};
 
 static void InitDefaultsscc_info_TableSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -62,7 +82,7 @@ static void InitDefaultsscc_info_TableSchema_google_2fcloud_2fbigquery_2fstorage
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_TableSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto}, {
       &scc_info_TableFieldSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto.base,}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto[2];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto[3];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto = nullptr;
 
@@ -73,6 +93,12 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_google_2fcloud_2fbigquery_2fst
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::TableSchema, fields_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType, type_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::TableFieldSchema, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -87,14 +113,17 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_google_2fcloud_2fbigquery_2fst
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::TableFieldSchema, precision_),
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::TableFieldSchema, scale_),
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::TableFieldSchema, default_value_expression_),
+  PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::TableFieldSchema, range_element_type_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::google::cloud::bigquery::storage::v1::TableSchema)},
-  { 6, -1, sizeof(::google::cloud::bigquery::storage::v1::TableFieldSchema)},
+  { 6, -1, sizeof(::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType)},
+  { 12, -1, sizeof(::google::cloud::bigquery::storage::v1::TableFieldSchema)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::google::cloud::bigquery::storage::v1::_TableSchema_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::google::cloud::bigquery::storage::v1::_TableFieldSchema_FieldElementType_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::google::cloud::bigquery::storage::v1::_TableFieldSchema_default_instance_),
 };
 
@@ -103,7 +132,7 @@ const char descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2f
   ".proto\022 google.cloud.bigquery.storage.v1"
   "\032\037google/api/field_behavior.proto\"Q\n\013Tab"
   "leSchema\022B\n\006fields\030\001 \003(\01322.google.cloud."
-  "bigquery.storage.v1.TableFieldSchema\"\254\005\n"
+  "bigquery.storage.v1.TableFieldSchema\"\375\006\n"
   "\020TableFieldSchema\022\021\n\004name\030\001 \001(\tB\003\340A\002\022J\n\004"
   "type\030\002 \001(\01627.google.cloud.bigquery.stora"
   "ge.v1.TableFieldSchema.TypeB\003\340A\002\022J\n\004mode"
@@ -113,33 +142,40 @@ const char descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2f
   "TableFieldSchemaB\003\340A\001\022\030\n\013description\030\006 \001"
   "(\tB\003\340A\001\022\027\n\nmax_length\030\007 \001(\003B\003\340A\001\022\026\n\tprec"
   "ision\030\010 \001(\003B\003\340A\001\022\022\n\005scale\030\t \001(\003B\003\340A\001\022%\n\030"
-  "default_value_expression\030\n \001(\tB\003\340A\001\"\325\001\n\004"
-  "Type\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006STRING\020\001\022\t"
-  "\n\005INT64\020\002\022\n\n\006DOUBLE\020\003\022\n\n\006STRUCT\020\004\022\t\n\005BYT"
-  "ES\020\005\022\010\n\004BOOL\020\006\022\r\n\tTIMESTAMP\020\007\022\010\n\004DATE\020\010\022"
-  "\010\n\004TIME\020\t\022\014\n\010DATETIME\020\n\022\r\n\tGEOGRAPHY\020\013\022\013"
-  "\n\007NUMERIC\020\014\022\016\n\nBIGNUMERIC\020\r\022\014\n\010INTERVAL\020"
-  "\016\022\010\n\004JSON\020\017\"F\n\004Mode\022\024\n\020MODE_UNSPECIFIED\020"
-  "\000\022\014\n\010NULLABLE\020\001\022\014\n\010REQUIRED\020\002\022\014\n\010REPEATE"
-  "D\020\003B\272\001\n$com.google.cloud.bigquery.storag"
-  "e.v1B\nTableProtoP\001Z>cloud.google.com/go/"
-  "bigquery/storage/apiv1/storagepb;storage"
-  "pb\252\002 Google.Cloud.BigQuery.Storage.V1\312\002 "
-  "Google\\Cloud\\BigQuery\\Storage\\V1b\006proto3"
+  "default_value_expression\030\n \001(\tB\003\340A\001\022d\n\022r"
+  "ange_element_type\030\013 \001(\0132C.google.cloud.b"
+  "igquery.storage.v1.TableFieldSchema.Fiel"
+  "dElementTypeB\003\340A\001\032^\n\020FieldElementType\022J\n"
+  "\004type\030\001 \001(\01627.google.cloud.bigquery.stor"
+  "age.v1.TableFieldSchema.TypeB\003\340A\002\"\340\001\n\004Ty"
+  "pe\022\024\n\020TYPE_UNSPECIFIED\020\000\022\n\n\006STRING\020\001\022\t\n\005"
+  "INT64\020\002\022\n\n\006DOUBLE\020\003\022\n\n\006STRUCT\020\004\022\t\n\005BYTES"
+  "\020\005\022\010\n\004BOOL\020\006\022\r\n\tTIMESTAMP\020\007\022\010\n\004DATE\020\010\022\010\n"
+  "\004TIME\020\t\022\014\n\010DATETIME\020\n\022\r\n\tGEOGRAPHY\020\013\022\013\n\007"
+  "NUMERIC\020\014\022\016\n\nBIGNUMERIC\020\r\022\014\n\010INTERVAL\020\016\022"
+  "\010\n\004JSON\020\017\022\t\n\005RANGE\020\020\"F\n\004Mode\022\024\n\020MODE_UNS"
+  "PECIFIED\020\000\022\014\n\010NULLABLE\020\001\022\014\n\010REQUIRED\020\002\022\014"
+  "\n\010REPEATED\020\003B\272\001\n$com.google.cloud.bigque"
+  "ry.storage.v1B\nTableProtoP\001Z>cloud.googl"
+  "e.com/go/bigquery/storage/apiv1/storagep"
+  "b;storagepb\252\002 Google.Cloud.BigQuery.Stor"
+  "age.V1\312\002 Google\\Cloud\\BigQuery\\Storage\\V"
+  "1b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto_deps[1] = {
   &::descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto_sccs[2] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto_sccs[3] = {
   &scc_info_TableFieldSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto.base,
+  &scc_info_TableFieldSchema_FieldElementType_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto.base,
   &scc_info_TableSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto = {
-  false, false, descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto, "google/cloud/bigquery/storage/v1/table.proto", 1080,
-  &descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto_once, descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto_sccs, descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto_deps, 2, 1,
+  false, false, descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto, "google/cloud/bigquery/storage/v1/table.proto", 1289,
+  &descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto_once, descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto_sccs, descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto_deps, 3, 1,
   schemas, file_default_instances, TableStruct_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto::offsets,
-  file_level_metadata_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto, 2, file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto, file_level_service_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto,
+  file_level_metadata_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto, 3, file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto, file_level_service_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -171,6 +207,7 @@ bool TableFieldSchema_Type_IsValid(int value) {
     case 13:
     case 14:
     case 15:
+    case 16:
       return true;
     default:
       return false;
@@ -194,6 +231,7 @@ constexpr TableFieldSchema_Type TableFieldSchema::NUMERIC;
 constexpr TableFieldSchema_Type TableFieldSchema::BIGNUMERIC;
 constexpr TableFieldSchema_Type TableFieldSchema::INTERVAL;
 constexpr TableFieldSchema_Type TableFieldSchema::JSON;
+constexpr TableFieldSchema_Type TableFieldSchema::RANGE;
 constexpr TableFieldSchema_Type TableFieldSchema::Type_MIN;
 constexpr TableFieldSchema_Type TableFieldSchema::Type_MAX;
 constexpr int TableFieldSchema::Type_ARRAYSIZE;
@@ -429,12 +467,217 @@ void TableSchema::InternalSwap(TableSchema* other) {
 
 // ===================================================================
 
-void TableFieldSchema::InitAsDefaultInstance() {
+void TableFieldSchema_FieldElementType::InitAsDefaultInstance() {
 }
-class TableFieldSchema::_Internal {
+class TableFieldSchema_FieldElementType::_Internal {
  public:
 };
 
+TableFieldSchema_FieldElementType::TableFieldSchema_FieldElementType(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+}
+TableFieldSchema_FieldElementType::TableFieldSchema_FieldElementType(const TableFieldSchema_FieldElementType& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  type_ = from.type_;
+  // @@protoc_insertion_point(copy_constructor:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+}
+
+void TableFieldSchema_FieldElementType::SharedCtor() {
+  type_ = 0;
+}
+
+TableFieldSchema_FieldElementType::~TableFieldSchema_FieldElementType() {
+  // @@protoc_insertion_point(destructor:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void TableFieldSchema_FieldElementType::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void TableFieldSchema_FieldElementType::ArenaDtor(void* object) {
+  TableFieldSchema_FieldElementType* _this = reinterpret_cast< TableFieldSchema_FieldElementType* >(object);
+  (void)_this;
+}
+void TableFieldSchema_FieldElementType::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void TableFieldSchema_FieldElementType::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const TableFieldSchema_FieldElementType& TableFieldSchema_FieldElementType::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TableFieldSchema_FieldElementType_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void TableFieldSchema_FieldElementType::Clear() {
+// @@protoc_insertion_point(message_clear_start:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  type_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* TableFieldSchema_FieldElementType::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .google.cloud.bigquery.storage.v1.TableFieldSchema.Type type = 1 [(.google.api.field_behavior) = REQUIRED];
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_type(static_cast<::google::cloud::bigquery::storage::v1::TableFieldSchema_Type>(val));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* TableFieldSchema_FieldElementType::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .google.cloud.bigquery.storage.v1.TableFieldSchema.Type type = 1 [(.google.api.field_behavior) = REQUIRED];
+  if (this->type() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      1, this->_internal_type(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+  return target;
+}
+
+size_t TableFieldSchema_FieldElementType::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .google.cloud.bigquery.storage.v1.TableFieldSchema.Type type = 1 [(.google.api.field_behavior) = REQUIRED];
+  if (this->type() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void TableFieldSchema_FieldElementType::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+  GOOGLE_DCHECK_NE(&from, this);
+  const TableFieldSchema_FieldElementType* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TableFieldSchema_FieldElementType>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+    MergeFrom(*source);
+  }
+}
+
+void TableFieldSchema_FieldElementType::MergeFrom(const TableFieldSchema_FieldElementType& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.type() != 0) {
+    _internal_set_type(from._internal_type());
+  }
+}
+
+void TableFieldSchema_FieldElementType::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void TableFieldSchema_FieldElementType::CopyFrom(const TableFieldSchema_FieldElementType& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool TableFieldSchema_FieldElementType::IsInitialized() const {
+  return true;
+}
+
+void TableFieldSchema_FieldElementType::InternalSwap(TableFieldSchema_FieldElementType* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(type_, other->type_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata TableFieldSchema_FieldElementType::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+void TableFieldSchema::InitAsDefaultInstance() {
+  ::google::cloud::bigquery::storage::v1::_TableFieldSchema_default_instance_._instance.get_mutable()->range_element_type_ = const_cast< ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType*>(
+      ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType::internal_default_instance());
+}
+class TableFieldSchema::_Internal {
+ public:
+  static const ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType& range_element_type(const TableFieldSchema* msg);
+};
+
+const ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType&
+TableFieldSchema::_Internal::range_element_type(const TableFieldSchema* msg) {
+  return *msg->range_element_type_;
+}
 TableFieldSchema::TableFieldSchema(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena),
   fields_(arena) {
@@ -461,6 +704,11 @@ TableFieldSchema::TableFieldSchema(const TableFieldSchema& from)
     default_value_expression_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_default_value_expression(),
       GetArena());
   }
+  if (from._internal_has_range_element_type()) {
+    range_element_type_ = new ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType(*from.range_element_type_);
+  } else {
+    range_element_type_ = nullptr;
+  }
   ::memcpy(&type_, &from.type_,
     static_cast<size_t>(reinterpret_cast<char*>(&scale_) -
     reinterpret_cast<char*>(&type_)) + sizeof(scale_));
@@ -472,9 +720,9 @@ void TableFieldSchema::SharedCtor() {
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   description_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   default_value_expression_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&type_, 0, static_cast<size_t>(
+  ::memset(&range_element_type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&scale_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(scale_));
+      reinterpret_cast<char*>(&range_element_type_)) + sizeof(scale_));
 }
 
 TableFieldSchema::~TableFieldSchema() {
@@ -488,6 +736,7 @@ void TableFieldSchema::SharedDtor() {
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   description_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   default_value_expression_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete range_element_type_;
 }
 
 void TableFieldSchema::ArenaDtor(void* object) {
@@ -515,6 +764,10 @@ void TableFieldSchema::Clear() {
   name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   description_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   default_value_expression_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  if (GetArena() == nullptr && range_element_type_ != nullptr) {
+    delete range_element_type_;
+  }
+  range_element_type_ = nullptr;
   ::memset(&type_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&scale_) -
       reinterpret_cast<char*>(&type_)) + sizeof(scale_));
@@ -602,6 +855,13 @@ const char* TableFieldSchema::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           auto str = _internal_mutable_default_value_expression();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "google.cloud.bigquery.storage.v1.TableFieldSchema.default_value_expression"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType range_element_type = 11 [(.google.api.field_behavior) = OPTIONAL];
+      case 11:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
+          ptr = ctx->ParseMessage(_internal_mutable_range_element_type(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -703,6 +963,14 @@ failure:
         10, this->_internal_default_value_expression(), target);
   }
 
+  // .google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType range_element_type = 11 [(.google.api.field_behavior) = OPTIONAL];
+  if (this->has_range_element_type()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        11, _Internal::range_element_type(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -745,6 +1013,13 @@ size_t TableFieldSchema::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_default_value_expression());
+  }
+
+  // .google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType range_element_type = 11 [(.google.api.field_behavior) = OPTIONAL];
+  if (this->has_range_element_type()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *range_element_type_);
   }
 
   // .google.cloud.bigquery.storage.v1.TableFieldSchema.Type type = 2 [(.google.api.field_behavior) = REQUIRED];
@@ -821,6 +1096,9 @@ void TableFieldSchema::MergeFrom(const TableFieldSchema& from) {
   if (from.default_value_expression().size() > 0) {
     _internal_set_default_value_expression(from._internal_default_value_expression());
   }
+  if (from.has_range_element_type()) {
+    _internal_mutable_range_element_type()->::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType::MergeFrom(from._internal_range_element_type());
+  }
   if (from.type() != 0) {
     _internal_set_type(from._internal_type());
   }
@@ -866,9 +1144,9 @@ void TableFieldSchema::InternalSwap(TableFieldSchema* other) {
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(TableFieldSchema, scale_)
       + sizeof(TableFieldSchema::scale_)
-      - PROTOBUF_FIELD_OFFSET(TableFieldSchema, type_)>(
-          reinterpret_cast<char*>(&type_),
-          reinterpret_cast<char*>(&other->type_));
+      - PROTOBUF_FIELD_OFFSET(TableFieldSchema, range_element_type_)>(
+          reinterpret_cast<char*>(&range_element_type_),
+          reinterpret_cast<char*>(&other->range_element_type_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TableFieldSchema::GetMetadata() const {
@@ -885,6 +1163,9 @@ void TableFieldSchema::InternalSwap(TableFieldSchema* other) {
 PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::google::cloud::bigquery::storage::v1::TableSchema* Arena::CreateMaybeMessage< ::google::cloud::bigquery::storage::v1::TableSchema >(Arena* arena) {
   return Arena::CreateMessageInternal< ::google::cloud::bigquery::storage::v1::TableSchema >(arena);
+}
+template<> PROTOBUF_NOINLINE ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* Arena::CreateMaybeMessage< ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType >(arena);
 }
 template<> PROTOBUF_NOINLINE ::google::cloud::bigquery::storage::v1::TableFieldSchema* Arena::CreateMaybeMessage< ::google::cloud::bigquery::storage::v1::TableFieldSchema >(Arena* arena) {
   return Arena::CreateMessageInternal< ::google::cloud::bigquery::storage::v1::TableFieldSchema >(arena);

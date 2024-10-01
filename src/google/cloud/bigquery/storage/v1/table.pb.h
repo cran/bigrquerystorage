@@ -49,7 +49,7 @@ struct TableStruct_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[2]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[3]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -64,6 +64,9 @@ namespace v1 {
 class TableFieldSchema;
 class TableFieldSchemaDefaultTypeInternal;
 extern TableFieldSchemaDefaultTypeInternal _TableFieldSchema_default_instance_;
+class TableFieldSchema_FieldElementType;
+class TableFieldSchema_FieldElementTypeDefaultTypeInternal;
+extern TableFieldSchema_FieldElementTypeDefaultTypeInternal _TableFieldSchema_FieldElementType_default_instance_;
 class TableSchema;
 class TableSchemaDefaultTypeInternal;
 extern TableSchemaDefaultTypeInternal _TableSchema_default_instance_;
@@ -74,6 +77,7 @@ extern TableSchemaDefaultTypeInternal _TableSchema_default_instance_;
 }  // namespace google
 PROTOBUF_NAMESPACE_OPEN
 template<> ::google::cloud::bigquery::storage::v1::TableFieldSchema* Arena::CreateMaybeMessage<::google::cloud::bigquery::storage::v1::TableFieldSchema>(Arena*);
+template<> ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* Arena::CreateMaybeMessage<::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType>(Arena*);
 template<> ::google::cloud::bigquery::storage::v1::TableSchema* Arena::CreateMaybeMessage<::google::cloud::bigquery::storage::v1::TableSchema>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace google {
@@ -99,12 +103,13 @@ enum TableFieldSchema_Type : int {
   TableFieldSchema_Type_BIGNUMERIC = 13,
   TableFieldSchema_Type_INTERVAL = 14,
   TableFieldSchema_Type_JSON = 15,
+  TableFieldSchema_Type_RANGE = 16,
   TableFieldSchema_Type_TableFieldSchema_Type_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   TableFieldSchema_Type_TableFieldSchema_Type_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool TableFieldSchema_Type_IsValid(int value);
 constexpr TableFieldSchema_Type TableFieldSchema_Type_Type_MIN = TableFieldSchema_Type_TYPE_UNSPECIFIED;
-constexpr TableFieldSchema_Type TableFieldSchema_Type_Type_MAX = TableFieldSchema_Type_JSON;
+constexpr TableFieldSchema_Type TableFieldSchema_Type_Type_MAX = TableFieldSchema_Type_RANGE;
 constexpr int TableFieldSchema_Type_Type_ARRAYSIZE = TableFieldSchema_Type_Type_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* TableFieldSchema_Type_descriptor();
@@ -296,6 +301,143 @@ class TableSchema PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
+class TableFieldSchema_FieldElementType PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType) */ {
+ public:
+  inline TableFieldSchema_FieldElementType() : TableFieldSchema_FieldElementType(nullptr) {};
+  virtual ~TableFieldSchema_FieldElementType();
+
+  TableFieldSchema_FieldElementType(const TableFieldSchema_FieldElementType& from);
+  TableFieldSchema_FieldElementType(TableFieldSchema_FieldElementType&& from) noexcept
+    : TableFieldSchema_FieldElementType() {
+    *this = ::std::move(from);
+  }
+
+  inline TableFieldSchema_FieldElementType& operator=(const TableFieldSchema_FieldElementType& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline TableFieldSchema_FieldElementType& operator=(TableFieldSchema_FieldElementType&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const TableFieldSchema_FieldElementType& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const TableFieldSchema_FieldElementType* internal_default_instance() {
+    return reinterpret_cast<const TableFieldSchema_FieldElementType*>(
+               &_TableFieldSchema_FieldElementType_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    1;
+
+  friend void swap(TableFieldSchema_FieldElementType& a, TableFieldSchema_FieldElementType& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(TableFieldSchema_FieldElementType* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(TableFieldSchema_FieldElementType* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TableFieldSchema_FieldElementType* New() const final {
+    return CreateMaybeMessage<TableFieldSchema_FieldElementType>(nullptr);
+  }
+
+  TableFieldSchema_FieldElementType* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<TableFieldSchema_FieldElementType>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const TableFieldSchema_FieldElementType& from);
+  void MergeFrom(const TableFieldSchema_FieldElementType& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(TableFieldSchema_FieldElementType* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType";
+  }
+  protected:
+  explicit TableFieldSchema_FieldElementType(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto);
+    return ::descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kTypeFieldNumber = 1,
+  };
+  // .google.cloud.bigquery.storage.v1.TableFieldSchema.Type type = 1 [(.google.api.field_behavior) = REQUIRED];
+  void clear_type();
+  ::google::cloud::bigquery::storage::v1::TableFieldSchema_Type type() const;
+  void set_type(::google::cloud::bigquery::storage::v1::TableFieldSchema_Type value);
+  private:
+  ::google::cloud::bigquery::storage::v1::TableFieldSchema_Type _internal_type() const;
+  void _internal_set_type(::google::cloud::bigquery::storage::v1::TableFieldSchema_Type value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  int type_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto;
+};
+// -------------------------------------------------------------------
+
 class TableFieldSchema PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:google.cloud.bigquery.storage.v1.TableFieldSchema) */ {
  public:
@@ -338,7 +480,7 @@ class TableFieldSchema PROTOBUF_FINAL :
                &_TableFieldSchema_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   friend void swap(TableFieldSchema& a, TableFieldSchema& b) {
     a.Swap(&b);
@@ -406,6 +548,8 @@ class TableFieldSchema PROTOBUF_FINAL :
 
   // nested types ----------------------------------------------------
 
+  typedef TableFieldSchema_FieldElementType FieldElementType;
+
   typedef TableFieldSchema_Type Type;
   static constexpr Type TYPE_UNSPECIFIED =
     TableFieldSchema_Type_TYPE_UNSPECIFIED;
@@ -439,6 +583,8 @@ class TableFieldSchema PROTOBUF_FINAL :
     TableFieldSchema_Type_INTERVAL;
   static constexpr Type JSON =
     TableFieldSchema_Type_JSON;
+  static constexpr Type RANGE =
+    TableFieldSchema_Type_RANGE;
   static inline bool Type_IsValid(int value) {
     return TableFieldSchema_Type_IsValid(value);
   }
@@ -505,6 +651,7 @@ class TableFieldSchema PROTOBUF_FINAL :
     kNameFieldNumber = 1,
     kDescriptionFieldNumber = 6,
     kDefaultValueExpressionFieldNumber = 10,
+    kRangeElementTypeFieldNumber = 11,
     kTypeFieldNumber = 2,
     kModeFieldNumber = 3,
     kMaxLengthFieldNumber = 7,
@@ -604,6 +751,24 @@ class TableFieldSchema PROTOBUF_FINAL :
   std::string* _internal_mutable_default_value_expression();
   public:
 
+  // .google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType range_element_type = 11 [(.google.api.field_behavior) = OPTIONAL];
+  bool has_range_element_type() const;
+  private:
+  bool _internal_has_range_element_type() const;
+  public:
+  void clear_range_element_type();
+  const ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType& range_element_type() const;
+  ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* release_range_element_type();
+  ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* mutable_range_element_type();
+  void set_allocated_range_element_type(::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* range_element_type);
+  private:
+  const ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType& _internal_range_element_type() const;
+  ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* _internal_mutable_range_element_type();
+  public:
+  void unsafe_arena_set_allocated_range_element_type(
+      ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* range_element_type);
+  ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* unsafe_arena_release_range_element_type();
+
   // .google.cloud.bigquery.storage.v1.TableFieldSchema.Type type = 2 [(.google.api.field_behavior) = REQUIRED];
   void clear_type();
   ::google::cloud::bigquery::storage::v1::TableFieldSchema_Type type() const;
@@ -660,6 +825,7 @@ class TableFieldSchema PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr default_value_expression_;
+  ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* range_element_type_;
   int type_;
   int mode_;
   ::PROTOBUF_NAMESPACE_ID::int64 max_length_;
@@ -716,6 +882,30 @@ inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::google::cloud::bigquer
 TableSchema::fields() const {
   // @@protoc_insertion_point(field_list:google.cloud.bigquery.storage.v1.TableSchema.fields)
   return fields_;
+}
+
+// -------------------------------------------------------------------
+
+// TableFieldSchema_FieldElementType
+
+// .google.cloud.bigquery.storage.v1.TableFieldSchema.Type type = 1 [(.google.api.field_behavior) = REQUIRED];
+inline void TableFieldSchema_FieldElementType::clear_type() {
+  type_ = 0;
+}
+inline ::google::cloud::bigquery::storage::v1::TableFieldSchema_Type TableFieldSchema_FieldElementType::_internal_type() const {
+  return static_cast< ::google::cloud::bigquery::storage::v1::TableFieldSchema_Type >(type_);
+}
+inline ::google::cloud::bigquery::storage::v1::TableFieldSchema_Type TableFieldSchema_FieldElementType::type() const {
+  // @@protoc_insertion_point(field_get:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType.type)
+  return _internal_type();
+}
+inline void TableFieldSchema_FieldElementType::_internal_set_type(::google::cloud::bigquery::storage::v1::TableFieldSchema_Type value) {
+  
+  type_ = value;
+}
+inline void TableFieldSchema_FieldElementType::set_type(::google::cloud::bigquery::storage::v1::TableFieldSchema_Type value) {
+  _internal_set_type(value);
+  // @@protoc_insertion_point(field_set:google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType.type)
 }
 
 // -------------------------------------------------------------------
@@ -1104,9 +1294,92 @@ inline void TableFieldSchema::unsafe_arena_set_allocated_default_value_expressio
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:google.cloud.bigquery.storage.v1.TableFieldSchema.default_value_expression)
 }
 
+// .google.cloud.bigquery.storage.v1.TableFieldSchema.FieldElementType range_element_type = 11 [(.google.api.field_behavior) = OPTIONAL];
+inline bool TableFieldSchema::_internal_has_range_element_type() const {
+  return this != internal_default_instance() && range_element_type_ != nullptr;
+}
+inline bool TableFieldSchema::has_range_element_type() const {
+  return _internal_has_range_element_type();
+}
+inline void TableFieldSchema::clear_range_element_type() {
+  if (GetArena() == nullptr && range_element_type_ != nullptr) {
+    delete range_element_type_;
+  }
+  range_element_type_ = nullptr;
+}
+inline const ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType& TableFieldSchema::_internal_range_element_type() const {
+  const ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* p = range_element_type_;
+  return p != nullptr ? *p : *reinterpret_cast<const ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType*>(
+      &::google::cloud::bigquery::storage::v1::_TableFieldSchema_FieldElementType_default_instance_);
+}
+inline const ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType& TableFieldSchema::range_element_type() const {
+  // @@protoc_insertion_point(field_get:google.cloud.bigquery.storage.v1.TableFieldSchema.range_element_type)
+  return _internal_range_element_type();
+}
+inline void TableFieldSchema::unsafe_arena_set_allocated_range_element_type(
+    ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* range_element_type) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(range_element_type_);
+  }
+  range_element_type_ = range_element_type;
+  if (range_element_type) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:google.cloud.bigquery.storage.v1.TableFieldSchema.range_element_type)
+}
+inline ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* TableFieldSchema::release_range_element_type() {
+  auto temp = unsafe_arena_release_range_element_type();
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* TableFieldSchema::unsafe_arena_release_range_element_type() {
+  // @@protoc_insertion_point(field_release:google.cloud.bigquery.storage.v1.TableFieldSchema.range_element_type)
+  
+  ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* temp = range_element_type_;
+  range_element_type_ = nullptr;
+  return temp;
+}
+inline ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* TableFieldSchema::_internal_mutable_range_element_type() {
+  
+  if (range_element_type_ == nullptr) {
+    auto* p = CreateMaybeMessage<::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType>(GetArena());
+    range_element_type_ = p;
+  }
+  return range_element_type_;
+}
+inline ::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* TableFieldSchema::mutable_range_element_type() {
+  // @@protoc_insertion_point(field_mutable:google.cloud.bigquery.storage.v1.TableFieldSchema.range_element_type)
+  return _internal_mutable_range_element_type();
+}
+inline void TableFieldSchema::set_allocated_range_element_type(::google::cloud::bigquery::storage::v1::TableFieldSchema_FieldElementType* range_element_type) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete range_element_type_;
+  }
+  if (range_element_type) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(range_element_type);
+    if (message_arena != submessage_arena) {
+      range_element_type = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, range_element_type, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  range_element_type_ = range_element_type;
+  // @@protoc_insertion_point(field_set_allocated:google.cloud.bigquery.storage.v1.TableFieldSchema.range_element_type)
+}
+
 #ifdef __GNUC__
   # pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 

@@ -139,7 +139,7 @@ static void InitDefaultsscc_info_WriteStream_google_2fcloud_2fbigquery_2fstorage
       &scc_info_TableSchema_google_2fcloud_2fbigquery_2fstorage_2fv1_2ftable_2eproto.base,}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto[5];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto[4];
+static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto[5];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
@@ -159,12 +159,14 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_google_2fcloud_2fbigquery_2fst
   offsetof(::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptionsDefaultTypeInternal, arrow_serialization_options_),
   offsetof(::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptionsDefaultTypeInternal, avro_serialization_options_),
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions, sample_percentage_),
+  PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions, response_compression_codec_),
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions, output_format_serialization_options_),
   ~0u,
   ~0u,
   ~0u,
   ~0u,
   0,
+  1,
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::google::cloud::bigquery::storage::v1::ReadSession, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -205,10 +207,10 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_google_2fcloud_2fbigquery_2fst
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::google::cloud::bigquery::storage::v1::ReadSession_TableModifiers)},
-  { 6, 17, sizeof(::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions)},
-  { 22, -1, sizeof(::google::cloud::bigquery::storage::v1::ReadSession)},
-  { 41, -1, sizeof(::google::cloud::bigquery::storage::v1::ReadStream)},
-  { 47, -1, sizeof(::google::cloud::bigquery::storage::v1::WriteStream)},
+  { 6, 18, sizeof(::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions)},
+  { 24, -1, sizeof(::google::cloud::bigquery::storage::v1::ReadSession)},
+  { 43, -1, sizeof(::google::cloud::bigquery::storage::v1::ReadStream)},
+  { 49, -1, sizeof(::google::cloud::bigquery::storage::v1::WriteStream)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -227,7 +229,7 @@ const char descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2f
   "uery/storage/v1/arrow.proto\032+google/clou"
   "d/bigquery/storage/v1/avro.proto\032,google"
   "/cloud/bigquery/storage/v1/table.proto\032\037"
-  "google/protobuf/timestamp.proto\"\260\n\n\013Read"
+  "google/protobuf/timestamp.proto\"\303\014\n\013Read"
   "Session\022\021\n\004name\030\001 \001(\tB\003\340A\003\0224\n\013expire_tim"
   "e\030\002 \001(\0132\032.google.protobuf.TimestampB\003\340A\003"
   "\022F\n\013data_format\030\003 \001(\0162,.google.cloud.big"
@@ -248,7 +250,7 @@ const char descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2f
   "file_size\030\017 \001(\003B\003\340A\003\022 \n\023estimated_row_co"
   "unt\030\016 \001(\003B\003\340A\003\022\025\n\010trace_id\030\r \001(\tB\003\340A\001\032C\n"
   "\016TableModifiers\0221\n\rsnapshot_time\030\001 \001(\0132\032"
-  ".google.protobuf.Timestamp\032\366\002\n\020TableRead"
+  ".google.protobuf.Timestamp\032\211\005\n\020TableRead"
   "Options\022\027\n\017selected_fields\030\001 \003(\t\022\027\n\017row_"
   "restriction\030\002 \001(\t\022g\n\033arrow_serialization"
   "_options\030\003 \001(\0132;.google.cloud.bigquery.s"
@@ -256,40 +258,47 @@ const char descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2f
   "H\000\022e\n\032avro_serialization_options\030\004 \001(\0132:"
   ".google.cloud.bigquery.storage.v1.AvroSe"
   "rializationOptionsB\003\340A\001H\000\022#\n\021sample_perc"
-  "entage\030\005 \001(\001B\003\340A\001H\001\210\001\001B%\n#output_format_"
-  "serialization_optionsB\024\n\022_sample_percent"
-  "age:k\352Ah\n*bigquerystorage.googleapis.com"
-  "/ReadSession\022:projects/{project}/locatio"
-  "ns/{location}/sessions/{session}B\010\n\006sche"
-  "ma\"\234\001\n\nReadStream\022\021\n\004name\030\001 \001(\tB\003\340A\003:{\352A"
-  "x\n)bigquerystorage.googleapis.com/ReadSt"
-  "ream\022Kprojects/{project}/locations/{loca"
-  "tion}/sessions/{session}/streams/{stream"
-  "}\"\373\004\n\013WriteStream\022\021\n\004name\030\001 \001(\tB\003\340A\003\022E\n\004"
-  "type\030\002 \001(\01622.google.cloud.bigquery.stora"
-  "ge.v1.WriteStream.TypeB\003\340A\005\0224\n\013create_ti"
-  "me\030\003 \001(\0132\032.google.protobuf.TimestampB\003\340A"
-  "\003\0224\n\013commit_time\030\004 \001(\0132\032.google.protobuf"
-  ".TimestampB\003\340A\003\022H\n\014table_schema\030\005 \001(\0132-."
-  "google.cloud.bigquery.storage.v1.TableSc"
-  "hemaB\003\340A\003\022P\n\nwrite_mode\030\007 \001(\01627.google.c"
-  "loud.bigquery.storage.v1.WriteStream.Wri"
-  "teModeB\003\340A\005\022\025\n\010location\030\010 \001(\tB\003\340A\005\"F\n\004Ty"
-  "pe\022\024\n\020TYPE_UNSPECIFIED\020\000\022\r\n\tCOMMITTED\020\001\022"
-  "\013\n\007PENDING\020\002\022\014\n\010BUFFERED\020\003\"3\n\tWriteMode\022"
-  "\032\n\026WRITE_MODE_UNSPECIFIED\020\000\022\n\n\006INSERT\020\001:"
-  "v\352As\n*bigquerystorage.googleapis.com/Wri"
-  "teStream\022Eprojects/{project}/datasets/{d"
-  "ataset}/tables/{table}/streams/{stream}*"
-  ">\n\nDataFormat\022\033\n\027DATA_FORMAT_UNSPECIFIED"
-  "\020\000\022\010\n\004AVRO\020\001\022\t\n\005ARROW\020\002*I\n\017WriteStreamVi"
-  "ew\022!\n\035WRITE_STREAM_VIEW_UNSPECIFIED\020\000\022\t\n"
-  "\005BASIC\020\001\022\010\n\004FULL\020\002B\273\001\n$com.google.cloud."
-  "bigquery.storage.v1B\013StreamProtoP\001Z>clou"
-  "d.google.com/go/bigquery/storage/apiv1/s"
-  "toragepb;storagepb\252\002 Google.Cloud.BigQue"
-  "ry.Storage.V1\312\002 Google\\Cloud\\BigQuery\\St"
-  "orage\\V1b\006proto3"
+  "entage\030\005 \001(\001B\003\340A\001H\001\210\001\001\022\205\001\n\032response_comp"
+  "ression_codec\030\006 \001(\0162W.google.cloud.bigqu"
+  "ery.storage.v1.ReadSession.TableReadOpti"
+  "ons.ResponseCompressionCodecB\003\340A\001H\002\210\001\001\"j"
+  "\n\030ResponseCompressionCodec\022*\n&RESPONSE_C"
+  "OMPRESSION_CODEC_UNSPECIFIED\020\000\022\"\n\036RESPON"
+  "SE_COMPRESSION_CODEC_LZ4\020\002B%\n#output_for"
+  "mat_serialization_optionsB\024\n\022_sample_per"
+  "centageB\035\n\033_response_compression_codec:k"
+  "\352Ah\n*bigquerystorage.googleapis.com/Read"
+  "Session\022:projects/{project}/locations/{l"
+  "ocation}/sessions/{session}B\010\n\006schema\"\234\001"
+  "\n\nReadStream\022\021\n\004name\030\001 \001(\tB\003\340A\003:{\352Ax\n)bi"
+  "gquerystorage.googleapis.com/ReadStream\022"
+  "Kprojects/{project}/locations/{location}"
+  "/sessions/{session}/streams/{stream}\"\373\004\n"
+  "\013WriteStream\022\021\n\004name\030\001 \001(\tB\003\340A\003\022E\n\004type\030"
+  "\002 \001(\01622.google.cloud.bigquery.storage.v1"
+  ".WriteStream.TypeB\003\340A\005\0224\n\013create_time\030\003 "
+  "\001(\0132\032.google.protobuf.TimestampB\003\340A\003\0224\n\013"
+  "commit_time\030\004 \001(\0132\032.google.protobuf.Time"
+  "stampB\003\340A\003\022H\n\014table_schema\030\005 \001(\0132-.googl"
+  "e.cloud.bigquery.storage.v1.TableSchemaB"
+  "\003\340A\003\022P\n\nwrite_mode\030\007 \001(\01627.google.cloud."
+  "bigquery.storage.v1.WriteStream.WriteMod"
+  "eB\003\340A\005\022\025\n\010location\030\010 \001(\tB\003\340A\005\"F\n\004Type\022\024\n"
+  "\020TYPE_UNSPECIFIED\020\000\022\r\n\tCOMMITTED\020\001\022\013\n\007PE"
+  "NDING\020\002\022\014\n\010BUFFERED\020\003\"3\n\tWriteMode\022\032\n\026WR"
+  "ITE_MODE_UNSPECIFIED\020\000\022\n\n\006INSERT\020\001:v\352As\n"
+  "*bigquerystorage.googleapis.com/WriteStr"
+  "eam\022Eprojects/{project}/datasets/{datase"
+  "t}/tables/{table}/streams/{stream}*>\n\nDa"
+  "taFormat\022\033\n\027DATA_FORMAT_UNSPECIFIED\020\000\022\010\n"
+  "\004AVRO\020\001\022\t\n\005ARROW\020\002*I\n\017WriteStreamView\022!\n"
+  "\035WRITE_STREAM_VIEW_UNSPECIFIED\020\000\022\t\n\005BASI"
+  "C\020\001\022\010\n\004FULL\020\002B\273\001\n$com.google.cloud.bigqu"
+  "ery.storage.v1B\013StreamProtoP\001Z>cloud.goo"
+  "gle.com/go/bigquery/storage/apiv1/storag"
+  "epb;storagepb\252\002 Google.Cloud.BigQuery.St"
+  "orage.V1\312\002 Google\\Cloud\\BigQuery\\Storage"
+  "\\V1b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto_deps[6] = {
   &::descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto,
@@ -308,7 +317,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_goo
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto = {
-  false, false, descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto, "google/cloud/bigquery/storage/v1/stream.proto", 2776,
+  false, false, descriptor_table_protodef_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto, "google/cloud/bigquery/storage/v1/stream.proto", 3051,
   &descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto_once, descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto_sccs, descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto_deps, 5, 6,
   schemas, file_default_instances, TableStruct_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto::offsets,
   file_level_metadata_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto, 5, file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto, file_level_service_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto,
@@ -321,9 +330,30 @@ namespace cloud {
 namespace bigquery {
 namespace storage {
 namespace v1 {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* WriteStream_Type_descriptor() {
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ReadSession_TableReadOptions_ResponseCompressionCodec_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto);
   return file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto[0];
+}
+bool ReadSession_TableReadOptions_ResponseCompressionCodec_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 2:
+      return true;
+    default:
+      return false;
+  }
+}
+
+#if (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+constexpr ReadSession_TableReadOptions_ResponseCompressionCodec ReadSession_TableReadOptions::RESPONSE_COMPRESSION_CODEC_UNSPECIFIED;
+constexpr ReadSession_TableReadOptions_ResponseCompressionCodec ReadSession_TableReadOptions::RESPONSE_COMPRESSION_CODEC_LZ4;
+constexpr ReadSession_TableReadOptions_ResponseCompressionCodec ReadSession_TableReadOptions::ResponseCompressionCodec_MIN;
+constexpr ReadSession_TableReadOptions_ResponseCompressionCodec ReadSession_TableReadOptions::ResponseCompressionCodec_MAX;
+constexpr int ReadSession_TableReadOptions::ResponseCompressionCodec_ARRAYSIZE;
+#endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* WriteStream_Type_descriptor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto);
+  return file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto[1];
 }
 bool WriteStream_Type_IsValid(int value) {
   switch (value) {
@@ -348,7 +378,7 @@ constexpr int WriteStream::Type_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* WriteStream_WriteMode_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto);
-  return file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto[1];
+  return file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto[2];
 }
 bool WriteStream_WriteMode_IsValid(int value) {
   switch (value) {
@@ -369,7 +399,7 @@ constexpr int WriteStream::WriteMode_ARRAYSIZE;
 #endif  // (__cplusplus < 201703) && (!defined(_MSC_VER) || _MSC_VER >= 1900)
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* DataFormat_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto);
-  return file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto[2];
+  return file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto[3];
 }
 bool DataFormat_IsValid(int value) {
   switch (value) {
@@ -384,7 +414,7 @@ bool DataFormat_IsValid(int value) {
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* WriteStreamView_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto);
-  return file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto[3];
+  return file_level_enum_descriptors_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto[4];
 }
 bool WriteStreamView_IsValid(int value) {
   switch (value) {
@@ -635,6 +665,9 @@ class ReadSession_TableReadOptions::_Internal {
   static void set_has_sample_percentage(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
+  static void set_has_response_compression_codec(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
 };
 
 const ::google::cloud::bigquery::storage::v1::ArrowSerializationOptions&
@@ -708,7 +741,9 @@ ReadSession_TableReadOptions::ReadSession_TableReadOptions(const ReadSession_Tab
     row_restriction_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_row_restriction(),
       GetArena());
   }
-  sample_percentage_ = from.sample_percentage_;
+  ::memcpy(&sample_percentage_, &from.sample_percentage_,
+    static_cast<size_t>(reinterpret_cast<char*>(&response_compression_codec_) -
+    reinterpret_cast<char*>(&sample_percentage_)) + sizeof(response_compression_codec_));
   clear_has_output_format_serialization_options();
   switch (from.output_format_serialization_options_case()) {
     case kArrowSerializationOptions: {
@@ -729,7 +764,9 @@ ReadSession_TableReadOptions::ReadSession_TableReadOptions(const ReadSession_Tab
 void ReadSession_TableReadOptions::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReadSession_TableReadOptions_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstream_2eproto.base);
   row_restriction_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  sample_percentage_ = 0;
+  ::memset(&sample_percentage_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&response_compression_codec_) -
+      reinterpret_cast<char*>(&sample_percentage_)) + sizeof(response_compression_codec_));
   clear_has_output_format_serialization_options();
 }
 
@@ -793,7 +830,12 @@ void ReadSession_TableReadOptions::Clear() {
 
   selected_fields_.Clear();
   row_restriction_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  sample_percentage_ = 0;
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&sample_percentage_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&response_compression_codec_) -
+        reinterpret_cast<char*>(&sample_percentage_)) + sizeof(response_compression_codec_));
+  }
   clear_output_format_serialization_options();
   _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -851,6 +893,14 @@ const char* ReadSession_TableReadOptions::_InternalParse(const char* ptr, ::PROT
           _Internal::set_has_sample_percentage(&has_bits);
           sample_percentage_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
           ptr += sizeof(double);
+        } else goto handle_unusual;
+        continue;
+      // .google.cloud.bigquery.storage.v1.ReadSession.TableReadOptions.ResponseCompressionCodec response_compression_codec = 6 [(.google.api.field_behavior) = OPTIONAL];
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_response_compression_codec(static_cast<::google::cloud::bigquery::storage::v1::ReadSession_TableReadOptions_ResponseCompressionCodec>(val));
         } else goto handle_unusual;
         continue;
       default: {
@@ -924,6 +974,13 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(5, this->_internal_sample_percentage(), target);
   }
 
+  // .google.cloud.bigquery.storage.v1.ReadSession.TableReadOptions.ResponseCompressionCodec response_compression_codec = 6 [(.google.api.field_behavior) = OPTIONAL];
+  if (_internal_has_response_compression_codec()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      6, this->_internal_response_compression_codec(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -955,12 +1012,20 @@ size_t ReadSession_TableReadOptions::ByteSizeLong() const {
         this->_internal_row_restriction());
   }
 
-  // double sample_percentage = 5 [(.google.api.field_behavior) = OPTIONAL];
   cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    total_size += 1 + 8;
-  }
+  if (cached_has_bits & 0x00000003u) {
+    // double sample_percentage = 5 [(.google.api.field_behavior) = OPTIONAL];
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 + 8;
+    }
 
+    // .google.cloud.bigquery.storage.v1.ReadSession.TableReadOptions.ResponseCompressionCodec response_compression_codec = 6 [(.google.api.field_behavior) = OPTIONAL];
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_response_compression_codec());
+    }
+
+  }
   switch (output_format_serialization_options_case()) {
     // .google.cloud.bigquery.storage.v1.ArrowSerializationOptions arrow_serialization_options = 3 [(.google.api.field_behavior) = OPTIONAL];
     case kArrowSerializationOptions: {
@@ -1015,8 +1080,15 @@ void ReadSession_TableReadOptions::MergeFrom(const ReadSession_TableReadOptions&
   if (from.row_restriction().size() > 0) {
     _internal_set_row_restriction(from._internal_row_restriction());
   }
-  if (from._internal_has_sample_percentage()) {
-    _internal_set_sample_percentage(from._internal_sample_percentage());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      sample_percentage_ = from.sample_percentage_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      response_compression_codec_ = from.response_compression_codec_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
   switch (from.output_format_serialization_options_case()) {
     case kArrowSerializationOptions: {
@@ -1057,7 +1129,12 @@ void ReadSession_TableReadOptions::InternalSwap(ReadSession_TableReadOptions* ot
   swap(_has_bits_[0], other->_has_bits_[0]);
   selected_fields_.InternalSwap(&other->selected_fields_);
   row_restriction_.Swap(&other->row_restriction_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(sample_percentage_, other->sample_percentage_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ReadSession_TableReadOptions, response_compression_codec_)
+      + sizeof(ReadSession_TableReadOptions::response_compression_codec_)
+      - PROTOBUF_FIELD_OFFSET(ReadSession_TableReadOptions, sample_percentage_)>(
+          reinterpret_cast<char*>(&sample_percentage_),
+          reinterpret_cast<char*>(&other->sample_percentage_));
   swap(output_format_serialization_options_, other->output_format_serialization_options_);
   swap(_oneof_case_[0], other->_oneof_case_[0]);
 }

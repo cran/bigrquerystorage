@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/bigrquerystorage)](https://cran.r-project.org/package=bigrquerystorage)
 [![R-CMD-check](https://github.com/meztez/bigrquerystorage/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/meztez/bigrquerystorage/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -40,11 +41,6 @@ R package to transform the raw stream into an R object.
 
 `bqs_table_download` is the main function of this package. Other
 functions are helpers to facilitate authentication and debugging.
-
-The package also includes DBI methods for `dbFetch` and `dbReadTable`.
-It should be loaded after `bigrquery`. Alternatively, use
-`overload_bq_table_download` to replace `bigrquery::bq_table_download`
-directly in `bigrquery` namespace.
 
 ## Installation
 
@@ -144,9 +140,11 @@ brew install grpc pkg-config
 
 #### Windows
 
-The package will automatically download a static build of the system
-requirements during installation. This works on R 4.2.x (with Rtools40
-or Rtools42), R 4.3.x (with Rtools43) or later currently.
+From Rtools43, grpc is included in the toolchain.
+
+The package used to automatically download static builds of the system
+requirements during installation but this was removed per CRAN policy.
+Only, R 4.3.x (with Rtools43) or later is currently supported.
 
 ## Example
 
@@ -176,7 +174,6 @@ rows <- bqs_table_download(
   , selected_fields = c("name", "number", "state"),
   row_restriction = 'state = "WA"'
   # , sample_percentage = 50
-  # , as_tibble = TRUE
 )
 
 sprintf(
@@ -184,13 +181,6 @@ sprintf(
   length(unique(rows$name)),
   paste(unique(rows$state), collapse = " ")
 )
-
-# Replace bigrquery::bq_download_table
-rows <- bigrquery::bq_table_download("bigquery-public-data.usa_names.usa_1910_current")
-# Downloading 6,122,890 rows in 613 pages.
-overload_bq_table_download(project_id)
-rows <- bigrquery::bq_table_download("bigquery-public-data.usa_names.usa_1910_current")
-# Streamed 6122890 rows in 5980 messages.
 ```
 
 ## Authentication

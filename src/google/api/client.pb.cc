@@ -27,7 +27,8 @@ extern PROTOBUF_INTERNAL_EXPORT_google_2fapi_2fclient_2eproto ::PROTOBUF_NAMESPA
 extern PROTOBUF_INTERNAL_EXPORT_google_2fapi_2fclient_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_MethodSettings_LongRunning_google_2fapi_2fclient_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_google_2fapi_2fclient_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_NodeSettings_google_2fapi_2fclient_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_google_2fapi_2fclient_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PhpSettings_google_2fapi_2fclient_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_google_2fapi_2fclient_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PythonSettings_google_2fapi_2fclient_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fapi_2fclient_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PythonSettings_google_2fapi_2fclient_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_google_2fapi_2fclient_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PythonSettings_ExperimentalFeatures_google_2fapi_2fclient_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_google_2fapi_2fclient_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_RubySettings_google_2fapi_2fclient_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fduration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Duration_google_2fprotobuf_2fduration_2eproto;
 namespace google {
@@ -60,6 +61,10 @@ class PhpSettingsDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PhpSettings> _instance;
 } _PhpSettings_default_instance_;
+class PythonSettings_ExperimentalFeaturesDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PythonSettings_ExperimentalFeatures> _instance;
+} _PythonSettings_ExperimentalFeatures_default_instance_;
 class PythonSettingsDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PythonSettings> _instance;
@@ -323,9 +328,24 @@ static void InitDefaultsscc_info_PythonSettings_google_2fapi_2fclient_2eproto() 
   ::google::api::PythonSettings::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PythonSettings_google_2fapi_2fclient_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PythonSettings_google_2fapi_2fclient_2eproto}, {
-      &scc_info_CommonLanguageSettings_google_2fapi_2fclient_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PythonSettings_google_2fapi_2fclient_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_PythonSettings_google_2fapi_2fclient_2eproto}, {
+      &scc_info_CommonLanguageSettings_google_2fapi_2fclient_2eproto.base,
+      &scc_info_PythonSettings_ExperimentalFeatures_google_2fapi_2fclient_2eproto.base,}};
+
+static void InitDefaultsscc_info_PythonSettings_ExperimentalFeatures_google_2fapi_2fclient_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::google::api::_PythonSettings_ExperimentalFeatures_default_instance_;
+    new (ptr) ::google::api::PythonSettings_ExperimentalFeatures();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::google::api::PythonSettings_ExperimentalFeatures::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PythonSettings_ExperimentalFeatures_google_2fapi_2fclient_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PythonSettings_ExperimentalFeatures_google_2fapi_2fclient_2eproto}, {}};
 
 static void InitDefaultsscc_info_RubySettings_google_2fapi_2fclient_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -342,7 +362,7 @@ static void InitDefaultsscc_info_RubySettings_google_2fapi_2fclient_2eproto() {
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_RubySettings_google_2fapi_2fclient_2eproto}, {
       &scc_info_CommonLanguageSettings_google_2fapi_2fclient_2eproto.base,}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_google_2fapi_2fclient_2eproto[16];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_google_2fapi_2fclient_2eproto[17];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_google_2fapi_2fclient_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_google_2fapi_2fclient_2eproto = nullptr;
 
@@ -385,6 +405,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_google_2fapi_2fclient_2eproto:
   PROTOBUF_FIELD_OFFSET(::google::api::Publishing, organization_),
   PROTOBUF_FIELD_OFFSET(::google::api::Publishing, library_settings_),
   PROTOBUF_FIELD_OFFSET(::google::api::Publishing, proto_reference_documentation_uri_),
+  PROTOBUF_FIELD_OFFSET(::google::api::Publishing, rest_reference_documentation_uri_),
   PROTOBUF_FIELD_OFFSET(::google::api::JavaSettings_ServiceClassNamesEntry_DoNotUse, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::google::api::JavaSettings_ServiceClassNamesEntry_DoNotUse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -415,11 +436,18 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_google_2fapi_2fclient_2eproto:
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::google::api::PhpSettings, common_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::google::api::PythonSettings_ExperimentalFeatures, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::google::api::PythonSettings_ExperimentalFeatures, rest_async_io_enabled_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::google::api::PythonSettings, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::google::api::PythonSettings, common_),
+  PROTOBUF_FIELD_OFFSET(::google::api::PythonSettings, experimental_features_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::google::api::NodeSettings, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -489,19 +517,20 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 0, -1, sizeof(::google::api::CommonLanguageSettings)},
   { 7, -1, sizeof(::google::api::ClientLibrarySettings)},
   { 23, -1, sizeof(::google::api::Publishing)},
-  { 38, 45, sizeof(::google::api::JavaSettings_ServiceClassNamesEntry_DoNotUse)},
-  { 47, -1, sizeof(::google::api::JavaSettings)},
-  { 55, -1, sizeof(::google::api::CppSettings)},
-  { 61, -1, sizeof(::google::api::PhpSettings)},
-  { 67, -1, sizeof(::google::api::PythonSettings)},
-  { 73, -1, sizeof(::google::api::NodeSettings)},
-  { 79, 86, sizeof(::google::api::DotnetSettings_RenamedServicesEntry_DoNotUse)},
-  { 88, 95, sizeof(::google::api::DotnetSettings_RenamedResourcesEntry_DoNotUse)},
-  { 97, -1, sizeof(::google::api::DotnetSettings)},
-  { 108, -1, sizeof(::google::api::RubySettings)},
-  { 114, -1, sizeof(::google::api::GoSettings)},
-  { 120, -1, sizeof(::google::api::MethodSettings_LongRunning)},
-  { 129, -1, sizeof(::google::api::MethodSettings)},
+  { 39, 46, sizeof(::google::api::JavaSettings_ServiceClassNamesEntry_DoNotUse)},
+  { 48, -1, sizeof(::google::api::JavaSettings)},
+  { 56, -1, sizeof(::google::api::CppSettings)},
+  { 62, -1, sizeof(::google::api::PhpSettings)},
+  { 68, -1, sizeof(::google::api::PythonSettings_ExperimentalFeatures)},
+  { 74, -1, sizeof(::google::api::PythonSettings)},
+  { 81, -1, sizeof(::google::api::NodeSettings)},
+  { 87, 94, sizeof(::google::api::DotnetSettings_RenamedServicesEntry_DoNotUse)},
+  { 96, 103, sizeof(::google::api::DotnetSettings_RenamedResourcesEntry_DoNotUse)},
+  { 105, -1, sizeof(::google::api::DotnetSettings)},
+  { 116, -1, sizeof(::google::api::RubySettings)},
+  { 122, -1, sizeof(::google::api::GoSettings)},
+  { 128, -1, sizeof(::google::api::MethodSettings_LongRunning)},
+  { 137, -1, sizeof(::google::api::MethodSettings)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -512,6 +541,7 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::google::api::_JavaSettings_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::google::api::_CppSettings_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::google::api::_PhpSettings_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::google::api::_PythonSettings_ExperimentalFeatures_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::google::api::_PythonSettings_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::google::api::_NodeSettings_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::google::api::_DotnetSettings_RenamedServicesEntry_DoNotUse_default_instance_),
@@ -543,7 +573,7 @@ const char descriptor_table_protodef_google_2fapi_2fclient_2eproto[] PROTOBUF_SE
   "2\032.google.api.DotnetSettings\022/\n\rruby_set"
   "tings\030\033 \001(\0132\030.google.api.RubySettings\022+\n"
   "\013go_settings\030\034 \001(\0132\026.google.api.GoSettin"
-  "gs\"\376\002\n\nPublishing\0223\n\017method_settings\030\002 \003"
+  "gs\"\250\003\n\nPublishing\0223\n\017method_settings\030\002 \003"
   "(\0132\032.google.api.MethodSettings\022\025\n\rnew_is"
   "sue_uri\030e \001(\t\022\031\n\021documentation_uri\030f \001(\t"
   "\022\026\n\016api_short_name\030g \001(\t\022\024\n\014github_label"
@@ -552,63 +582,69 @@ const char descriptor_table_protodef_google_2fapi_2fclient_2eproto[] PROTOBUF_SE
   " \001(\0162%.google.api.ClientLibraryOrganizat"
   "ion\022;\n\020library_settings\030m \003(\0132!.google.a"
   "pi.ClientLibrarySettings\022)\n!proto_refere"
-  "nce_documentation_uri\030n \001(\t\"\343\001\n\014JavaSett"
-  "ings\022\027\n\017library_package\030\001 \001(\t\022L\n\023service"
-  "_class_names\030\002 \003(\0132/.google.api.JavaSett"
-  "ings.ServiceClassNamesEntry\0222\n\006common\030\003 "
-  "\001(\0132\".google.api.CommonLanguageSettings\032"
-  "8\n\026ServiceClassNamesEntry\022\013\n\003key\030\001 \001(\t\022\r"
-  "\n\005value\030\002 \001(\t:\0028\001\"A\n\013CppSettings\0222\n\006comm"
+  "nce_documentation_uri\030n \001(\t\022(\n rest_refe"
+  "rence_documentation_uri\030o \001(\t\"\343\001\n\014JavaSe"
+  "ttings\022\027\n\017library_package\030\001 \001(\t\022L\n\023servi"
+  "ce_class_names\030\002 \003(\0132/.google.api.JavaSe"
+  "ttings.ServiceClassNamesEntry\0222\n\006common\030"
+  "\003 \001(\0132\".google.api.CommonLanguageSetting"
+  "s\0328\n\026ServiceClassNamesEntry\022\013\n\003key\030\001 \001(\t"
+  "\022\r\n\005value\030\002 \001(\t:\0028\001\"A\n\013CppSettings\0222\n\006co"
+  "mmon\030\001 \001(\0132\".google.api.CommonLanguageSe"
+  "ttings\"A\n\013PhpSettings\0222\n\006common\030\001 \001(\0132\"."
+  "google.api.CommonLanguageSettings\"\313\001\n\016Py"
+  "thonSettings\0222\n\006common\030\001 \001(\0132\".google.ap"
+  "i.CommonLanguageSettings\022N\n\025experimental"
+  "_features\030\002 \001(\0132/.google.api.PythonSetti"
+  "ngs.ExperimentalFeatures\0325\n\024Experimental"
+  "Features\022\035\n\025rest_async_io_enabled\030\001 \001(\010\""
+  "B\n\014NodeSettings\0222\n\006common\030\001 \001(\0132\".google"
+  ".api.CommonLanguageSettings\"\252\003\n\016DotnetSe"
+  "ttings\0222\n\006common\030\001 \001(\0132\".google.api.Comm"
+  "onLanguageSettings\022I\n\020renamed_services\030\002"
+  " \003(\0132/.google.api.DotnetSettings.Renamed"
+  "ServicesEntry\022K\n\021renamed_resources\030\003 \003(\013"
+  "20.google.api.DotnetSettings.RenamedReso"
+  "urcesEntry\022\031\n\021ignored_resources\030\004 \003(\t\022 \n"
+  "\030forced_namespace_aliases\030\005 \003(\t\022\036\n\026handw"
+  "ritten_signatures\030\006 \003(\t\0326\n\024RenamedServic"
+  "esEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032"
+  "7\n\025RenamedResourcesEntry\022\013\n\003key\030\001 \001(\t\022\r\n"
+  "\005value\030\002 \001(\t:\0028\001\"B\n\014RubySettings\0222\n\006comm"
   "on\030\001 \001(\0132\".google.api.CommonLanguageSett"
-  "ings\"A\n\013PhpSettings\0222\n\006common\030\001 \001(\0132\".go"
-  "ogle.api.CommonLanguageSettings\"D\n\016Pytho"
-  "nSettings\0222\n\006common\030\001 \001(\0132\".google.api.C"
-  "ommonLanguageSettings\"B\n\014NodeSettings\0222\n"
-  "\006common\030\001 \001(\0132\".google.api.CommonLanguag"
-  "eSettings\"\252\003\n\016DotnetSettings\0222\n\006common\030\001"
-  " \001(\0132\".google.api.CommonLanguageSettings"
-  "\022I\n\020renamed_services\030\002 \003(\0132/.google.api."
-  "DotnetSettings.RenamedServicesEntry\022K\n\021r"
-  "enamed_resources\030\003 \003(\01320.google.api.Dotn"
-  "etSettings.RenamedResourcesEntry\022\031\n\021igno"
-  "red_resources\030\004 \003(\t\022 \n\030forced_namespace_"
-  "aliases\030\005 \003(\t\022\036\n\026handwritten_signatures\030"
-  "\006 \003(\t\0326\n\024RenamedServicesEntry\022\013\n\003key\030\001 \001"
-  "(\t\022\r\n\005value\030\002 \001(\t:\0028\001\0327\n\025RenamedResource"
-  "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"B"
-  "\n\014RubySettings\0222\n\006common\030\001 \001(\0132\".google."
-  "api.CommonLanguageSettings\"@\n\nGoSettings"
-  "\0222\n\006common\030\001 \001(\0132\".google.api.CommonLang"
-  "uageSettings\"\317\002\n\016MethodSettings\022\020\n\010selec"
-  "tor\030\001 \001(\t\022<\n\014long_running\030\002 \001(\0132&.google"
-  ".api.MethodSettings.LongRunning\022\035\n\025auto_"
-  "populated_fields\030\003 \003(\t\032\315\001\n\013LongRunning\0225"
-  "\n\022initial_poll_delay\030\001 \001(\0132\031.google.prot"
-  "obuf.Duration\022\035\n\025poll_delay_multiplier\030\002"
-  " \001(\002\0221\n\016max_poll_delay\030\003 \001(\0132\031.google.pr"
-  "otobuf.Duration\0225\n\022total_poll_timeout\030\004 "
-  "\001(\0132\031.google.protobuf.Duration*\243\001\n\031Clien"
-  "tLibraryOrganization\022+\n\'CLIENT_LIBRARY_O"
-  "RGANIZATION_UNSPECIFIED\020\000\022\t\n\005CLOUD\020\001\022\007\n\003"
-  "ADS\020\002\022\n\n\006PHOTOS\020\003\022\017\n\013STREET_VIEW\020\004\022\014\n\010SH"
-  "OPPING\020\005\022\007\n\003GEO\020\006\022\021\n\rGENERATIVE_AI\020\007*g\n\030"
-  "ClientLibraryDestination\022*\n&CLIENT_LIBRA"
-  "RY_DESTINATION_UNSPECIFIED\020\000\022\n\n\006GITHUB\020\n"
-  "\022\023\n\017PACKAGE_MANAGER\020\024:9\n\020method_signatur"
-  "e\022\036.google.protobuf.MethodOptions\030\233\010 \003(\t"
-  ":6\n\014default_host\022\037.google.protobuf.Servi"
-  "ceOptions\030\231\010 \001(\t:6\n\014oauth_scopes\022\037.googl"
-  "e.protobuf.ServiceOptions\030\232\010 \001(\tBi\n\016com."
-  "google.apiB\013ClientProtoP\001ZAgoogle.golang"
-  ".org/genproto/googleapis/api/annotations"
-  ";annotations\242\002\004GAPIb\006proto3"
+  "ings\"@\n\nGoSettings\0222\n\006common\030\001 \001(\0132\".goo"
+  "gle.api.CommonLanguageSettings\"\317\002\n\016Metho"
+  "dSettings\022\020\n\010selector\030\001 \001(\t\022<\n\014long_runn"
+  "ing\030\002 \001(\0132&.google.api.MethodSettings.Lo"
+  "ngRunning\022\035\n\025auto_populated_fields\030\003 \003(\t"
+  "\032\315\001\n\013LongRunning\0225\n\022initial_poll_delay\030\001"
+  " \001(\0132\031.google.protobuf.Duration\022\035\n\025poll_"
+  "delay_multiplier\030\002 \001(\002\0221\n\016max_poll_delay"
+  "\030\003 \001(\0132\031.google.protobuf.Duration\0225\n\022tot"
+  "al_poll_timeout\030\004 \001(\0132\031.google.protobuf."
+  "Duration*\243\001\n\031ClientLibraryOrganization\022+"
+  "\n\'CLIENT_LIBRARY_ORGANIZATION_UNSPECIFIE"
+  "D\020\000\022\t\n\005CLOUD\020\001\022\007\n\003ADS\020\002\022\n\n\006PHOTOS\020\003\022\017\n\013S"
+  "TREET_VIEW\020\004\022\014\n\010SHOPPING\020\005\022\007\n\003GEO\020\006\022\021\n\rG"
+  "ENERATIVE_AI\020\007*g\n\030ClientLibraryDestinati"
+  "on\022*\n&CLIENT_LIBRARY_DESTINATION_UNSPECI"
+  "FIED\020\000\022\n\n\006GITHUB\020\n\022\023\n\017PACKAGE_MANAGER\020\024:"
+  "9\n\020method_signature\022\036.google.protobuf.Me"
+  "thodOptions\030\233\010 \003(\t:6\n\014default_host\022\037.goo"
+  "gle.protobuf.ServiceOptions\030\231\010 \001(\t:6\n\014oa"
+  "uth_scopes\022\037.google.protobuf.ServiceOpti"
+  "ons\030\232\010 \001(\t:8\n\013api_version\022\037.google.proto"
+  "buf.ServiceOptions\030\301\272\253\372\001 \001(\tBi\n\016com.goog"
+  "le.apiB\013ClientProtoP\001ZAgoogle.golang.org"
+  "/genproto/googleapis/api/annotations;ann"
+  "otations\242\002\004GAPIb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_google_2fapi_2fclient_2eproto_deps[3] = {
   &::descriptor_table_google_2fapi_2flaunch_5fstage_2eproto,
   &::descriptor_table_google_2fprotobuf_2fdescriptor_2eproto,
   &::descriptor_table_google_2fprotobuf_2fduration_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_google_2fapi_2fclient_2eproto_sccs[16] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_google_2fapi_2fclient_2eproto_sccs[17] = {
   &scc_info_ClientLibrarySettings_google_2fapi_2fclient_2eproto.base,
   &scc_info_CommonLanguageSettings_google_2fapi_2fclient_2eproto.base,
   &scc_info_CppSettings_google_2fapi_2fclient_2eproto.base,
@@ -624,14 +660,15 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_goo
   &scc_info_PhpSettings_google_2fapi_2fclient_2eproto.base,
   &scc_info_Publishing_google_2fapi_2fclient_2eproto.base,
   &scc_info_PythonSettings_google_2fapi_2fclient_2eproto.base,
+  &scc_info_PythonSettings_ExperimentalFeatures_google_2fapi_2fclient_2eproto.base,
   &scc_info_RubySettings_google_2fapi_2fclient_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_google_2fapi_2fclient_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_google_2fapi_2fclient_2eproto = {
-  false, false, descriptor_table_protodef_google_2fapi_2fclient_2eproto, "google/api/client.proto", 3107,
-  &descriptor_table_google_2fapi_2fclient_2eproto_once, descriptor_table_google_2fapi_2fclient_2eproto_sccs, descriptor_table_google_2fapi_2fclient_2eproto_deps, 16, 3,
+  false, false, descriptor_table_protodef_google_2fapi_2fclient_2eproto, "google/api/client.proto", 3343,
+  &descriptor_table_google_2fapi_2fclient_2eproto_once, descriptor_table_google_2fapi_2fclient_2eproto_sccs, descriptor_table_google_2fapi_2fclient_2eproto_deps, 17, 3,
   schemas, file_default_instances, TableStruct_google_2fapi_2fclient_2eproto::offsets,
-  file_level_metadata_google_2fapi_2fclient_2eproto, 16, file_level_enum_descriptors_google_2fapi_2fclient_2eproto, file_level_service_descriptors_google_2fapi_2fclient_2eproto,
+  file_level_metadata_google_2fapi_2fclient_2eproto, 17, file_level_enum_descriptors_google_2fapi_2fclient_2eproto, file_level_service_descriptors_google_2fapi_2fclient_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -1584,6 +1621,11 @@ Publishing::Publishing(const Publishing& from)
     proto_reference_documentation_uri_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_proto_reference_documentation_uri(),
       GetArena());
   }
+  rest_reference_documentation_uri_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_rest_reference_documentation_uri().empty()) {
+    rest_reference_documentation_uri_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_rest_reference_documentation_uri(),
+      GetArena());
+  }
   organization_ = from.organization_;
   // @@protoc_insertion_point(copy_constructor:google.api.Publishing)
 }
@@ -1596,6 +1638,7 @@ void Publishing::SharedCtor() {
   github_label_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   doc_tag_prefix_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   proto_reference_documentation_uri_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  rest_reference_documentation_uri_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   organization_ = 0;
 }
 
@@ -1613,6 +1656,7 @@ void Publishing::SharedDtor() {
   github_label_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   doc_tag_prefix_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   proto_reference_documentation_uri_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  rest_reference_documentation_uri_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void Publishing::ArenaDtor(void* object) {
@@ -1645,6 +1689,7 @@ void Publishing::Clear() {
   github_label_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   doc_tag_prefix_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   proto_reference_documentation_uri_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  rest_reference_documentation_uri_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   organization_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -1754,6 +1799,15 @@ const char* Publishing::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
           auto str = _internal_mutable_proto_reference_documentation_uri();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "google.api.Publishing.proto_reference_documentation_uri"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string rest_reference_documentation_uri = 111;
+      case 111:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
+          auto str = _internal_mutable_rest_reference_documentation_uri();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "google.api.Publishing.rest_reference_documentation_uri"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1878,6 +1932,16 @@ failure:
         110, this->_internal_proto_reference_documentation_uri(), target);
   }
 
+  // string rest_reference_documentation_uri = 111;
+  if (this->rest_reference_documentation_uri().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_rest_reference_documentation_uri().data(), static_cast<int>(this->_internal_rest_reference_documentation_uri().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "google.api.Publishing.rest_reference_documentation_uri");
+    target = stream->WriteStringMaybeAliased(
+        111, this->_internal_rest_reference_documentation_uri(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -1958,6 +2022,13 @@ size_t Publishing::ByteSizeLong() const {
         this->_internal_proto_reference_documentation_uri());
   }
 
+  // string rest_reference_documentation_uri = 111;
+  if (this->rest_reference_documentation_uri().size() > 0) {
+    total_size += 2 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_rest_reference_documentation_uri());
+  }
+
   // .google.api.ClientLibraryOrganization organization = 107;
   if (this->organization() != 0) {
     total_size += 2 +
@@ -2016,6 +2087,9 @@ void Publishing::MergeFrom(const Publishing& from) {
   if (from.proto_reference_documentation_uri().size() > 0) {
     _internal_set_proto_reference_documentation_uri(from._internal_proto_reference_documentation_uri());
   }
+  if (from.rest_reference_documentation_uri().size() > 0) {
+    _internal_set_rest_reference_documentation_uri(from._internal_rest_reference_documentation_uri());
+  }
   if (from.organization() != 0) {
     _internal_set_organization(from._internal_organization());
   }
@@ -2051,6 +2125,7 @@ void Publishing::InternalSwap(Publishing* other) {
   github_label_.Swap(&other->github_label_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   doc_tag_prefix_.Swap(&other->doc_tag_prefix_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   proto_reference_documentation_uri_.Swap(&other->proto_reference_documentation_uri_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  rest_reference_documentation_uri_.Swap(&other->rest_reference_documentation_uri_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   swap(organization_, other->organization_);
 }
 
@@ -2832,18 +2907,220 @@ void PhpSettings::InternalSwap(PhpSettings* other) {
 
 // ===================================================================
 
+void PythonSettings_ExperimentalFeatures::InitAsDefaultInstance() {
+}
+class PythonSettings_ExperimentalFeatures::_Internal {
+ public:
+};
+
+PythonSettings_ExperimentalFeatures::PythonSettings_ExperimentalFeatures(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:google.api.PythonSettings.ExperimentalFeatures)
+}
+PythonSettings_ExperimentalFeatures::PythonSettings_ExperimentalFeatures(const PythonSettings_ExperimentalFeatures& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  rest_async_io_enabled_ = from.rest_async_io_enabled_;
+  // @@protoc_insertion_point(copy_constructor:google.api.PythonSettings.ExperimentalFeatures)
+}
+
+void PythonSettings_ExperimentalFeatures::SharedCtor() {
+  rest_async_io_enabled_ = false;
+}
+
+PythonSettings_ExperimentalFeatures::~PythonSettings_ExperimentalFeatures() {
+  // @@protoc_insertion_point(destructor:google.api.PythonSettings.ExperimentalFeatures)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void PythonSettings_ExperimentalFeatures::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void PythonSettings_ExperimentalFeatures::ArenaDtor(void* object) {
+  PythonSettings_ExperimentalFeatures* _this = reinterpret_cast< PythonSettings_ExperimentalFeatures* >(object);
+  (void)_this;
+}
+void PythonSettings_ExperimentalFeatures::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void PythonSettings_ExperimentalFeatures::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const PythonSettings_ExperimentalFeatures& PythonSettings_ExperimentalFeatures::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PythonSettings_ExperimentalFeatures_google_2fapi_2fclient_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void PythonSettings_ExperimentalFeatures::Clear() {
+// @@protoc_insertion_point(message_clear_start:google.api.PythonSettings.ExperimentalFeatures)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  rest_async_io_enabled_ = false;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* PythonSettings_ExperimentalFeatures::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // bool rest_async_io_enabled = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          rest_async_io_enabled_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* PythonSettings_ExperimentalFeatures::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:google.api.PythonSettings.ExperimentalFeatures)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // bool rest_async_io_enabled = 1;
+  if (this->rest_async_io_enabled() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_rest_async_io_enabled(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:google.api.PythonSettings.ExperimentalFeatures)
+  return target;
+}
+
+size_t PythonSettings_ExperimentalFeatures::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:google.api.PythonSettings.ExperimentalFeatures)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // bool rest_async_io_enabled = 1;
+  if (this->rest_async_io_enabled() != 0) {
+    total_size += 1 + 1;
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void PythonSettings_ExperimentalFeatures::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:google.api.PythonSettings.ExperimentalFeatures)
+  GOOGLE_DCHECK_NE(&from, this);
+  const PythonSettings_ExperimentalFeatures* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PythonSettings_ExperimentalFeatures>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:google.api.PythonSettings.ExperimentalFeatures)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:google.api.PythonSettings.ExperimentalFeatures)
+    MergeFrom(*source);
+  }
+}
+
+void PythonSettings_ExperimentalFeatures::MergeFrom(const PythonSettings_ExperimentalFeatures& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:google.api.PythonSettings.ExperimentalFeatures)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.rest_async_io_enabled() != 0) {
+    _internal_set_rest_async_io_enabled(from._internal_rest_async_io_enabled());
+  }
+}
+
+void PythonSettings_ExperimentalFeatures::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:google.api.PythonSettings.ExperimentalFeatures)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void PythonSettings_ExperimentalFeatures::CopyFrom(const PythonSettings_ExperimentalFeatures& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:google.api.PythonSettings.ExperimentalFeatures)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PythonSettings_ExperimentalFeatures::IsInitialized() const {
+  return true;
+}
+
+void PythonSettings_ExperimentalFeatures::InternalSwap(PythonSettings_ExperimentalFeatures* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(rest_async_io_enabled_, other->rest_async_io_enabled_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata PythonSettings_ExperimentalFeatures::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 void PythonSettings::InitAsDefaultInstance() {
   ::google::api::_PythonSettings_default_instance_._instance.get_mutable()->common_ = const_cast< ::google::api::CommonLanguageSettings*>(
       ::google::api::CommonLanguageSettings::internal_default_instance());
+  ::google::api::_PythonSettings_default_instance_._instance.get_mutable()->experimental_features_ = const_cast< ::google::api::PythonSettings_ExperimentalFeatures*>(
+      ::google::api::PythonSettings_ExperimentalFeatures::internal_default_instance());
 }
 class PythonSettings::_Internal {
  public:
   static const ::google::api::CommonLanguageSettings& common(const PythonSettings* msg);
+  static const ::google::api::PythonSettings_ExperimentalFeatures& experimental_features(const PythonSettings* msg);
 };
 
 const ::google::api::CommonLanguageSettings&
 PythonSettings::_Internal::common(const PythonSettings* msg) {
   return *msg->common_;
+}
+const ::google::api::PythonSettings_ExperimentalFeatures&
+PythonSettings::_Internal::experimental_features(const PythonSettings* msg) {
+  return *msg->experimental_features_;
 }
 PythonSettings::PythonSettings(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
@@ -2859,12 +3136,19 @@ PythonSettings::PythonSettings(const PythonSettings& from)
   } else {
     common_ = nullptr;
   }
+  if (from._internal_has_experimental_features()) {
+    experimental_features_ = new ::google::api::PythonSettings_ExperimentalFeatures(*from.experimental_features_);
+  } else {
+    experimental_features_ = nullptr;
+  }
   // @@protoc_insertion_point(copy_constructor:google.api.PythonSettings)
 }
 
 void PythonSettings::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PythonSettings_google_2fapi_2fclient_2eproto.base);
-  common_ = nullptr;
+  ::memset(&common_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&experimental_features_) -
+      reinterpret_cast<char*>(&common_)) + sizeof(experimental_features_));
 }
 
 PythonSettings::~PythonSettings() {
@@ -2876,6 +3160,7 @@ PythonSettings::~PythonSettings() {
 void PythonSettings::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   if (this != internal_default_instance()) delete common_;
+  if (this != internal_default_instance()) delete experimental_features_;
 }
 
 void PythonSettings::ArenaDtor(void* object) {
@@ -2903,6 +3188,10 @@ void PythonSettings::Clear() {
     delete common_;
   }
   common_ = nullptr;
+  if (GetArena() == nullptr && experimental_features_ != nullptr) {
+    delete experimental_features_;
+  }
+  experimental_features_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2918,6 +3207,13 @@ const char* PythonSettings::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_common(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.api.PythonSettings.ExperimentalFeatures experimental_features = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_experimental_features(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2957,6 +3253,14 @@ failure:
         1, _Internal::common(this), target, stream);
   }
 
+  // .google.api.PythonSettings.ExperimentalFeatures experimental_features = 2;
+  if (this->has_experimental_features()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::experimental_features(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -2978,6 +3282,13 @@ size_t PythonSettings::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *common_);
+  }
+
+  // .google.api.PythonSettings.ExperimentalFeatures experimental_features = 2;
+  if (this->has_experimental_features()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *experimental_features_);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -3014,6 +3325,9 @@ void PythonSettings::MergeFrom(const PythonSettings& from) {
   if (from.has_common()) {
     _internal_mutable_common()->::google::api::CommonLanguageSettings::MergeFrom(from._internal_common());
   }
+  if (from.has_experimental_features()) {
+    _internal_mutable_experimental_features()->::google::api::PythonSettings_ExperimentalFeatures::MergeFrom(from._internal_experimental_features());
+  }
 }
 
 void PythonSettings::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -3037,7 +3351,12 @@ bool PythonSettings::IsInitialized() const {
 void PythonSettings::InternalSwap(PythonSettings* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(common_, other->common_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(PythonSettings, experimental_features_)
+      + sizeof(PythonSettings::experimental_features_)
+      - PROTOBUF_FIELD_OFFSET(PythonSettings, common_)>(
+          reinterpret_cast<char*>(&common_),
+          reinterpret_cast<char*>(&other->common_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PythonSettings::GetMetadata() const {
@@ -4840,6 +5159,10 @@ const std::string oauth_scopes_default("");
 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::ServiceOptions,
     ::PROTOBUF_NAMESPACE_ID::internal::StringTypeTraits, 9, false >
   oauth_scopes(kOauthScopesFieldNumber, oauth_scopes_default);
+const std::string api_version_default("");
+::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::ServiceOptions,
+    ::PROTOBUF_NAMESPACE_ID::internal::StringTypeTraits, 9, false >
+  api_version(kApiVersionFieldNumber, api_version_default);
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace api
@@ -4865,6 +5188,9 @@ template<> PROTOBUF_NOINLINE ::google::api::CppSettings* Arena::CreateMaybeMessa
 }
 template<> PROTOBUF_NOINLINE ::google::api::PhpSettings* Arena::CreateMaybeMessage< ::google::api::PhpSettings >(Arena* arena) {
   return Arena::CreateMessageInternal< ::google::api::PhpSettings >(arena);
+}
+template<> PROTOBUF_NOINLINE ::google::api::PythonSettings_ExperimentalFeatures* Arena::CreateMaybeMessage< ::google::api::PythonSettings_ExperimentalFeatures >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::google::api::PythonSettings_ExperimentalFeatures >(arena);
 }
 template<> PROTOBUF_NOINLINE ::google::api::PythonSettings* Arena::CreateMaybeMessage< ::google::api::PythonSettings >(Arena* arena) {
   return Arena::CreateMessageInternal< ::google::api::PythonSettings >(arena);

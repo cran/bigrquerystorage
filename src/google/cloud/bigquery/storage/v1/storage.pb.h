@@ -1191,6 +1191,7 @@ class ReadRowsResponse PROTOBUF_FINAL :
     kStatsFieldNumber = 2,
     kThrottleStateFieldNumber = 5,
     kRowCountFieldNumber = 6,
+    kUncompressedByteSizeFieldNumber = 9,
     kAvroRowsFieldNumber = 3,
     kArrowRecordBatchFieldNumber = 4,
     kAvroSchemaFieldNumber = 7,
@@ -1239,6 +1240,19 @@ class ReadRowsResponse PROTOBUF_FINAL :
   private:
   ::PROTOBUF_NAMESPACE_ID::int64 _internal_row_count() const;
   void _internal_set_row_count(::PROTOBUF_NAMESPACE_ID::int64 value);
+  public:
+
+  // int64 uncompressed_byte_size = 9 [(.google.api.field_behavior) = OPTIONAL];
+  bool has_uncompressed_byte_size() const;
+  private:
+  bool _internal_has_uncompressed_byte_size() const;
+  public:
+  void clear_uncompressed_byte_size();
+  ::PROTOBUF_NAMESPACE_ID::int64 uncompressed_byte_size() const;
+  void set_uncompressed_byte_size(::PROTOBUF_NAMESPACE_ID::int64 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_uncompressed_byte_size() const;
+  void _internal_set_uncompressed_byte_size(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
   // .google.cloud.bigquery.storage.v1.AvroRows avro_rows = 3;
@@ -1334,9 +1348,12 @@ class ReadRowsResponse PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::google::cloud::bigquery::storage::v1::StreamStats* stats_;
   ::google::cloud::bigquery::storage::v1::ThrottleState* throttle_state_;
   ::PROTOBUF_NAMESPACE_ID::int64 row_count_;
+  ::PROTOBUF_NAMESPACE_ID::int64 uncompressed_byte_size_;
   union RowsUnion {
     RowsUnion() {}
     ::google::cloud::bigquery::storage::v1::AvroRows* avro_rows_;
@@ -1347,7 +1364,6 @@ class ReadRowsResponse PROTOBUF_FINAL :
     ::google::cloud::bigquery::storage::v1::AvroSchema* avro_schema_;
     ::google::cloud::bigquery::storage::v1::ArrowSchema* arrow_schema_;
   } schema_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[2];
 
   friend struct ::TableStruct_google_2fcloud_2fbigquery_2fstorage_2fv1_2fstorage_2eproto;
@@ -5227,6 +5243,34 @@ inline ::google::cloud::bigquery::storage::v1::ArrowSchema* ReadRowsResponse::_i
 inline ::google::cloud::bigquery::storage::v1::ArrowSchema* ReadRowsResponse::mutable_arrow_schema() {
   // @@protoc_insertion_point(field_mutable:google.cloud.bigquery.storage.v1.ReadRowsResponse.arrow_schema)
   return _internal_mutable_arrow_schema();
+}
+
+// int64 uncompressed_byte_size = 9 [(.google.api.field_behavior) = OPTIONAL];
+inline bool ReadRowsResponse::_internal_has_uncompressed_byte_size() const {
+  bool value = (_has_bits_[0] & 0x00000001u) != 0;
+  return value;
+}
+inline bool ReadRowsResponse::has_uncompressed_byte_size() const {
+  return _internal_has_uncompressed_byte_size();
+}
+inline void ReadRowsResponse::clear_uncompressed_byte_size() {
+  uncompressed_byte_size_ = PROTOBUF_LONGLONG(0);
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ReadRowsResponse::_internal_uncompressed_byte_size() const {
+  return uncompressed_byte_size_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int64 ReadRowsResponse::uncompressed_byte_size() const {
+  // @@protoc_insertion_point(field_get:google.cloud.bigquery.storage.v1.ReadRowsResponse.uncompressed_byte_size)
+  return _internal_uncompressed_byte_size();
+}
+inline void ReadRowsResponse::_internal_set_uncompressed_byte_size(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _has_bits_[0] |= 0x00000001u;
+  uncompressed_byte_size_ = value;
+}
+inline void ReadRowsResponse::set_uncompressed_byte_size(::PROTOBUF_NAMESPACE_ID::int64 value) {
+  _internal_set_uncompressed_byte_size(value);
+  // @@protoc_insertion_point(field_set:google.cloud.bigquery.storage.v1.ReadRowsResponse.uncompressed_byte_size)
 }
 
 inline bool ReadRowsResponse::has_rows() const {

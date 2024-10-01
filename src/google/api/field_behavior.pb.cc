@@ -32,12 +32,12 @@ const char descriptor_table_protodef_google_2fapi_2ffield_5fbehavior_2eproto[] P
   "ECIFIED\020\000\022\014\n\010OPTIONAL\020\001\022\014\n\010REQUIRED\020\002\022\017\n"
   "\013OUTPUT_ONLY\020\003\022\016\n\nINPUT_ONLY\020\004\022\r\n\tIMMUTA"
   "BLE\020\005\022\022\n\016UNORDERED_LIST\020\006\022\025\n\021NON_EMPTY_D"
-  "EFAULT\020\007\022\016\n\nIDENTIFIER\020\010:Q\n\016field_behavi"
+  "EFAULT\020\007\022\016\n\nIDENTIFIER\020\010:U\n\016field_behavi"
   "or\022\035.google.protobuf.FieldOptions\030\234\010 \003(\016"
-  "2\031.google.api.FieldBehaviorBp\n\016com.googl"
-  "e.apiB\022FieldBehaviorProtoP\001ZAgoogle.gola"
-  "ng.org/genproto/googleapis/api/annotatio"
-  "ns;annotations\242\002\004GAPIb\006proto3"
+  "2\031.google.api.FieldBehaviorB\002\020\000Bp\n\016com.g"
+  "oogle.apiB\022FieldBehaviorProtoP\001ZAgoogle."
+  "golang.org/genproto/googleapis/api/annot"
+  "ations;annotations\242\002\004GAPIb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2fdescriptor_2eproto,
@@ -46,7 +46,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_goo
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto = {
-  false, false, descriptor_table_protodef_google_2fapi_2ffield_5fbehavior_2eproto, "google/api/field_behavior.proto", 469,
+  false, false, descriptor_table_protodef_google_2fapi_2ffield_5fbehavior_2eproto, "google/api/field_behavior.proto", 473,
   &descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto_once, descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto_sccs, descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto_deps, 0, 1,
   schemas, file_default_instances, TableStruct_google_2fapi_2ffield_5fbehavior_2eproto::offsets,
   file_level_metadata_google_2fapi_2ffield_5fbehavior_2eproto, 0, file_level_enum_descriptors_google_2fapi_2ffield_5fbehavior_2eproto, file_level_service_descriptors_google_2fapi_2ffield_5fbehavior_2eproto,
@@ -78,7 +78,7 @@ bool FieldBehavior_IsValid(int value) {
 }
 
 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::RepeatedEnumTypeTraits< ::google::api::FieldBehavior, ::google::api::FieldBehavior_IsValid>, 14, true >
+    ::PROTOBUF_NAMESPACE_ID::internal::RepeatedEnumTypeTraits< ::google::api::FieldBehavior, ::google::api::FieldBehavior_IsValid>, 14, false >
   field_behavior(kFieldBehaviorFieldNumber, static_cast< ::google::api::FieldBehavior >(0));
 
 // @@protoc_insertion_point(namespace_scope)
