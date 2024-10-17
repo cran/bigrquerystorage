@@ -1,7 +1,7 @@
 Package: bigrquerystorage
 Type: Package
 Title: An Interface to Google's 'BigQuery Storage' API
-Version: 1.2.0
+Version: 1.2.1
 Authors@R: c(
   person("Bruno", "Tremblay", role = c("aut", "cre"), email = "openr@neoxone.com"),
   person(family = "Google LLC", role = c("cph", "fnd")))
@@ -9,7 +9,7 @@ Maintainer: Bruno Tremblay <openr@neoxone.com>
 Description: Easily talk to Google's 'BigQuery Storage' API from R
     (<https://cloud.google.com/bigquery/docs/reference/storage/rpc>).
 License: Apache License (>= 2)
-Imports: nanoarrow (>= 0.5.0), rlang, assertthat, Rcpp, lifecycle,
+Imports: nanoarrow (>= 0.6.0), rlang, assertthat, Rcpp, lifecycle,
         bit64, tibble
 Suggests: blob, bigrquery, testthat, hms, wk (>= 0.3.2), tzdb,
         base64enc
@@ -23,8 +23,8 @@ SystemRequirements: grpc/protobuf headers and compilers. For example
 RoxygenNote: 7.3.2
 Biarch: TRUE
 NeedsCompilation: yes
-Packaged: 2024-10-01 13:30:11 UTC; bruno.tremblay
+Packaged: 2024-10-17 12:17:53 UTC; bruno
 Author: Bruno Tremblay [aut, cre],
   Google LLC [cph, fnd]
 Repository: CRAN
-Date/Publication: 2024-10-01 15:20:07 UTC
+Date/Publication: 2024-10-17 12:50:05 UTC
