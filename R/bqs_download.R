@@ -165,12 +165,12 @@ bqs_auth <- function() {
   if (bigrquery::bq_has_token()) {
     .authcred <- asNamespace("bigrquery")[[".auth"]][["cred"]]
     if (!is.null(refresh_token <- .authcred[["credentials"]][["refresh_token"]])) {
-      .authclient <- .authcred[["client"]]
+      .authsource <- c(.authcred[["client"]], .authcred[["app"]])
       access_token <- ""
       refresh_token <- c(
         type = "authorized_user",
-        client_secret = .authclient[["secret"]],
-        client_id = .authclient[["key"]],
+        client_secret = .authsource[["secret"]],
+        client_id = .authsource[["key"]],
         refresh_token = refresh_token
       )
       refresh_token <- paste0("{", paste0(
@@ -238,7 +238,7 @@ parse_postprocess <- function(df, bigint, fields) {
       character = as.character
     )
     tests[["bigint"]] <- list(
-    	"test" = function(x,y) is.numeric(x),
+    	"test" = function(x,y) is.numeric(x) & y[["type"]] %in% c("INT", "SMALLINT", "INTEGER", "BIGINT", "TINYINT", "BYTEINT", "INT64"),
     	"func" = function(x) as_bigint(x)
     )
   }

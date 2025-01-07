@@ -1,7 +1,7 @@
 Package: bigrquerystorage
 Type: Package
 Title: An Interface to Google's 'BigQuery Storage' API
-Version: 1.2.1
+Version: 1.2.2
 Authors@R: c(
   person("Bruno", "Tremblay", role = c("aut", "cre"), email = "openr@neoxone.com"),
   person(family = "Google LLC", role = c("cph", "fnd")))
@@ -23,8 +23,8 @@ SystemRequirements: grpc/protobuf headers and compilers. For example
 RoxygenNote: 7.3.2
 Biarch: TRUE
 NeedsCompilation: yes
-Packaged: 2024-10-17 12:17:53 UTC; bruno
+Packaged: 2025-01-07 21:19:22 UTC; tremb
 Author: Bruno Tremblay [aut, cre],
   Google LLC [cph, fnd]
 Repository: CRAN
-Date/Publication: 2024-10-17 12:50:05 UTC
+Date/Publication: 2025-01-07 21:50:12 UTC
